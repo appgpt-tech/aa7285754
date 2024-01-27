@@ -50,8 +50,7 @@ export const List = () => (
           <TextField source="" />
 <TextField source="" />
 <TextField source="" />
-<TextField source="" />
-<TextField source="" />
+<NumberField source="" />
 <TextField source="" />
 <TextField source="" />
 <NumberField source="" /><EditButton />
@@ -66,8 +65,7 @@ export const Edit = () => (
                           <TextInput source=""   />
 <TextInput source=""   />
 <TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
+<NumberInput source=""   />
 <TextInput source=""   />
 <TextInput source=""   />
 <NumberInput source=""   />
@@ -81,8 +79,7 @@ export const Create = () => (
                                         <TextInput source=""   />
 <TextInput source=""   />
 <TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
+<NumberInput source=""   />
 <TextInput source=""   />
 <TextInput source=""   />
 <NumberInput source=""   />
@@ -92,7 +89,6 @@ export const Create = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
 ,
 ,
 ,
