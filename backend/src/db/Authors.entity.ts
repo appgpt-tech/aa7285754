@@ -13,7 +13,7 @@ authorName: string;
 dateOfBirth: string;
 
 @Column({nullable: true})
-gender: string;
+sex: string;
 
 @Column({nullable: true})
 countryOfBirth: string;
