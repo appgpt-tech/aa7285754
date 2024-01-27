@@ -10,7 +10,7 @@ import LoginPage, { Login } from "./Login";
 import data from "./data";
 import { BooksList, BooksCreate, BooksEdit} from "./resources/Books";
 import { AuthorsList, AuthorsCreate, AuthorsEdit} from "./resources/Authors";
-import BooksIcon from "@mui/icons-material/Book";
+import BooksIcon from "@mui/icons-material/MenuBook";
 import AuthorsIcon from "@mui/icons-material/Person"; 
 // SUPERTOKENS
 import React from "react";
