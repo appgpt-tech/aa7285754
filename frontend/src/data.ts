@@ -1,3 +1,3 @@
 
-let data: any = {"defaultData":{"":[{"":4.3},{"":4.2},{"":3.9}]}};
+let data: any = {"defaultData":{"":[{"":"Science Fiction"},{"":"Romance"},{"":"Mystery"}]}};
 export default data;
