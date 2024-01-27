@@ -9,7 +9,7 @@ import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
 import { BooksList, BooksCreate, BooksEdit} from "./resources/Books";
-import BooksIcon from "@mui/icons-material/LibraryBooks"; 
+import BooksIcon from "@mui/icons-material/Book"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
