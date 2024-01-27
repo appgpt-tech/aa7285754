@@ -1,0 +1,3 @@
+
+let data: any = {"defaultData":{"Books":[{"bookTitle":"Book 1","releaseDate":"2001-01-01","numberOfBooksSold":5000,"author":"Author 1","numberOfEditions":1},{"bookTitle":"Book 2","releaseDate":"2002-02-02","numberOfBooksSold":10000,"author":"Author 2","numberOfEditions":2},{"bookTitle":"Book 3","releaseDate":"2003-03-03","numberOfBooksSold":1000,"author":"Author 3","numberOfEditions":3}],"Authors":[{"authorName":"Author 1","dateOfBirth":"1970-01-01","gender":"Male","countryOfBirth":"USA"},{"authorName":"Author 2","dateOfBirth":"1980-01-01","gender":"Female","countryOfBirth":"UK"},{"authorName":"Author 3","dateOfBirth":"1990-01-01","gender":"Non-binary","countryOfBirth":"Canada"}]}};
+export default data;
