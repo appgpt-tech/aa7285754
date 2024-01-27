@@ -24,7 +24,7 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Books":[{"Title":"Book 1","Author":"Author 1","ISBN":"ISBN 1","CopiesSold":100,"IssueDate":"2022-01-01","Genre":"Fiction"},{"Title":"Book 2","Author":"Author 2","ISBN":"ISBN 2","CopiesSold":200,"IssueDate":"2022-02-01","Genre":"Non-Fiction"},{"Title":"Book 3","Author":"Author 3","ISBN":"ISBN 3","CopiesSold":300,"IssueDate":"2022-03-01","Genre":"Fantasy"}]};
+    let data: any = {"Books":[{"title":"Book Title 1","author":"Author 1","ISBN":"ISBN111","copiesSold":100,"issueDate":"2022-01-22","genre":"Historical"},{"title":"Book Title 2","author":"Author 2","ISBN":"ISBN222","copiesSold":200,"issueDate":"2022-02-23","genre":"Sci-Fi"},{"title":"Book Title 3","author":"Author 3","ISBN":"ISBN333","copiesSold":300,"issueDate":"2022-03-25","genre":"Fantasy"}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
