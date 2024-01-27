@@ -49,7 +49,7 @@ export const AuthorsList = () => (
         <DatagridConfigurable>
           <TextField source="authorName" />
 <TextField source="dateOfBirth" />
-<TextField source="gender" />
+<TextField source="sex" />
 <TextField source="countryOfBirth" />
 <NumberField source="id" /><EditButton />
 
@@ -62,7 +62,7 @@ export const AuthorsEdit = () => (
                       <SimpleForm>
                           <TextInput source="authorName"   />
 <TextInput source="dateOfBirth"   />
-<TextInput source="gender"   />
+<TextInput source="sex"   />
 <TextInput source="countryOfBirth"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
@@ -74,7 +74,7 @@ export const AuthorsCreate = () => (
                                     <SimpleForm>
                                         <TextInput source="authorName"   />
 <TextInput source="dateOfBirth"   />
-<TextInput source="gender"   />
+<TextInput source="sex"   />
 <TextInput source="countryOfBirth"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
