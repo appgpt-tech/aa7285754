@@ -47,12 +47,12 @@ const BooksTitle = () => {
 export const BooksList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="Title" />
-<TextField source="Author" />
+          <TextField source="title" />
+<TextField source="author" />
 <TextField source="ISBN" />
-<TextField source="CopiesSold" />
-<TextField source="IssueDate" />
-<TextField source="Genre" />
+<TextField source="copiesSold" />
+<TextField source="issueDate" />
+<TextField source="genre" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -62,12 +62,12 @@ export const BooksList = () => (
 export const BooksEdit = () => (
                     <Edit title={<BooksTitle />}>
                       <SimpleForm>
-                          <TextInput source="Title"   />
-<TextInput source="Author"   />
+                          <TextInput source="title"   />
+<TextInput source="author"   />
 <TextInput source="ISBN"   />
-<TextInput source="CopiesSold"   />
-<TextInput source="IssueDate"   />
-<TextInput source="Genre"   />
+<TextInput source="copiesSold"   />
+<TextInput source="issueDate"   />
+<TextInput source="genre"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -76,12 +76,12 @@ export const BooksEdit = () => (
 export const BooksCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="Title"   />
-<TextInput source="Author"   />
+                                        <TextInput source="title"   />
+<TextInput source="author"   />
 <TextInput source="ISBN"   />
-<TextInput source="CopiesSold"   />
-<TextInput source="IssueDate"   />
-<TextInput source="Genre"   />
+<TextInput source="copiesSold"   />
+<TextInput source="issueDate"   />
+<TextInput source="genre"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
