@@ -27,8 +27,5 @@ export class Entity {
 @Column({nullable: true})
 : string;
 
-@Column({nullable: true})
-: string;
-
 
 }
