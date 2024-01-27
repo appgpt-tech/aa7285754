@@ -41,7 +41,7 @@ const ListActions = () => (
 );
 const BooksTitle = () => {
   const record = useRecordContext();
-  return <span>Books {record ? `"${ record.Id }"` : ""}</span>;
+  return <span>Books {record ? `"${ record.ISBN }"` : ""}</span>;
 };
 
 export const BooksList = () => (
@@ -49,12 +49,11 @@ export const BooksList = () => (
         <DatagridConfigurable>
           <TextField source="Title" />
 <TextField source="Author" />
-<TextField source="Isbn" />
-<TextField source="Copiessold" />
-<TextField source="Issuedate" />
+<TextField source="ISBN" />
+<TextField source="CopiesSold" />
+<TextField source="IssueDate" />
 <TextField source="Genre" />
-<TextField source="Rating" />
-<NumberField source="Id" /><EditButton />
+<NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -65,12 +64,11 @@ export const BooksEdit = () => (
                       <SimpleForm>
                           <TextInput source="Title"   />
 <TextInput source="Author"   />
-<TextInput source="Isbn"   />
-<TextInput source="Copiessold"   />
-<TextInput source="Issuedate"   />
+<TextInput source="ISBN"   />
+<TextInput source="CopiesSold"   />
+<TextInput source="IssueDate"   />
 <TextInput source="Genre"   />
-<TextInput source="Rating"   />
-<NumberInput source="Id"   disabled/>
+<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -80,19 +78,17 @@ export const BooksCreate = () => (
                                     <SimpleForm>
                                         <TextInput source="Title"   />
 <TextInput source="Author"   />
-<TextInput source="Isbn"   />
-<TextInput source="Copiessold"   />
-<TextInput source="Issuedate"   />
+<TextInput source="ISBN"   />
+<TextInput source="CopiesSold"   />
+<TextInput source="IssueDate"   />
 <TextInput source="Genre"   />
-<TextInput source="Rating"   />
-<NumberInput source="Id"   disabled/>
+<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
 ,
 ,
 ,
