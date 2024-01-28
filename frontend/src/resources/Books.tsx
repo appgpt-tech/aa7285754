@@ -41,19 +41,19 @@ const ListActions = () => (
 );
 const BooksTitle = () => {
   const record = useRecordContext();
-  return <span>Books {record ? `"${ record.ISBN }"` : ""}</span>;
+  return <span>Books {record ? `"${ record.isbn }"` : ""}</span>;
 };
 
 export const BooksList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="Title" />
-<TextField source="Author" />
-<TextField source="ISBN" />
-<TextField source="CopiesSold" />
-<TextField source="IssueDate" />
-<TextField source="Genre" />
-<TextField source="Rating" />
+          <TextField source="title" />
+<TextField source="author" />
+<TextField source="isbn" />
+<TextField source="copiesSold" />
+<TextField source="issueDate" />
+<TextField source="genre" />
+<TextField source="rating" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -63,13 +63,13 @@ export const BooksList = () => (
 export const BooksEdit = () => (
                     <Edit title={<BooksTitle />}>
                       <SimpleForm>
-                          <TextInput source="Title"   />
-<TextInput source="Author"   />
-<TextInput source="ISBN"   />
-<TextInput source="CopiesSold"   />
-<TextInput source="IssueDate"   />
-<TextInput source="Genre"   />
-<TextInput source="Rating"   />
+                          <TextInput source="title"   />
+<TextInput source="author"   />
+<TextInput source="isbn"   />
+<TextInput source="copiesSold"   />
+<TextInput source="issueDate"   />
+<TextInput source="genre"   />
+<TextInput source="rating"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -78,13 +78,13 @@ export const BooksEdit = () => (
 export const BooksCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="Title"   />
-<TextInput source="Author"   />
-<TextInput source="ISBN"   />
-<TextInput source="CopiesSold"   />
-<TextInput source="IssueDate"   />
-<TextInput source="Genre"   />
-<TextInput source="Rating"   />
+                                        <TextInput source="title"   />
+<TextInput source="author"   />
+<TextInput source="isbn"   />
+<TextInput source="copiesSold"   />
+<TextInput source="issueDate"   />
+<TextInput source="genre"   />
+<TextInput source="rating"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
