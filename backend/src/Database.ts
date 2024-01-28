@@ -4,6 +4,7 @@ import { DBConfiguration } from "./Configuration";
 import { SettingsEntity } from "./db/Settings.entity";
 //autogenerate imports based on resources
 import { BooksEntity } from "./db/Books.entity";
+import { AuthorsEntity } from "./db/Authors.entity";
 
 export class Database {
   static dbConfiguration: DBConfiguration;
@@ -14,7 +15,7 @@ export class Database {
     let dbConfig: any = dbConfiguration as any;
     //Autogenerate entities array from resource names
 
-    dbConfig.entities = [SettingsEntity, BooksEntity];
+    dbConfig.entities = [SettingsEntity, BooksEntity, AuthorsEntity];
     Database.ds = new DataSource(dbConfig);
     await Database.ds.initialize();
 
@@ -24,14 +25,15 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Books":[{"title":"Book Title 1","author":"Author 1","ISBN":"ISBN111","copiesSold":100,"issueDate":"2022-01-22","genre":"Historical"},{"title":"Book Title 2","author":"Author 2","ISBN":"ISBN222","copiesSold":200,"issueDate":"2022-02-23","genre":"Sci-Fi"},{"title":"Book Title 3","author":"Author 3","ISBN":"ISBN333","copiesSold":300,"issueDate":"2022-03-25","genre":"Fantasy"}]};
+    let data: any = {"Books":[{"bookTitle":"Book 1","releaseDate":"2001-01-01","numberOfBooksSold":"100000","author":"Author A","numberOfEditions":"5"},{"bookTitle":"Book 2","releaseDate":"2002-02-02","numberOfBooksSold":"200000","author":"Author B","numberOfEditions":"2"},{"bookTitle":"Book 3","releaseDate":"2003-03-03","numberOfBooksSold":"300000","author":"Author C","numberOfEditions":"3"}],"Authors":[{"authorName":"Author A","dateOfBirth":"1970-01-01","sex":"Male","countryOfBirth":"Country A"},{"authorName":"Author B","dateOfBirth":"1980-02-02","sex":"Female","countryOfBirth":"Country B"},{"authorName":"Author C","dateOfBirth":"1990-03-03","sex":"Other","countryOfBirth":"Country C"}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
     //forcing app recreation
     if (true){
       console.log('   Seeding database...');
-      await this.SeedResource("BooksEntity", data.Books); 
+      await this.SeedResource("BooksEntity", data.Books);
+await this.SeedResource("AuthorsEntity", data.Authors); 
       await this.SeedResource("SettingsEntity", {
         settingname: "isSeeded",
         settingvalue: "true",
