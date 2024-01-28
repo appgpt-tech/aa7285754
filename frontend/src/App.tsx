@@ -8,8 +8,12 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { BooksList, BooksCreate, BooksEdit} from "./resources/Books";
-import BooksIcon from "@mui/icons-material/Book"; 
+import { LoansList, LoansCreate, LoansEdit} from "./resources/Loans";
+import { RealEstateList, RealEstateCreate, RealEstateEdit} from "./resources/RealEstate";
+import { RiskFactorsList, RiskFactorsCreate, RiskFactorsEdit} from "./resources/RiskFactors";
+import LoansIcon from "@mui/icons-material/MonetizationOn";
+import RealEstateIcon from "@mui/icons-material/Home";
+import RiskFactorsIcon from "@mui/icons-material/Warning"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -71,12 +75,24 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="Books" options={{label:"books"}} 
-list={BooksList}
-create={BooksCreate}
-edit={BooksEdit}
-recordRepresentation="ISBN"
-icon={BooksIcon}/>
+    <Resource name="Loans" options={{label:"loans"}} 
+list={LoansList}
+create={LoansCreate}
+edit={LoansEdit}
+recordRepresentation="id"
+icon={LoansIcon}/>
+<Resource name="RealEstate" options={{label:"realEstate"}} 
+list={RealEstateList}
+create={RealEstateCreate}
+edit={RealEstateEdit}
+recordRepresentation="geolocation"
+icon={RealEstateIcon}/>
+<Resource name="RiskFactors" options={{label:"riskFactors"}} 
+list={RiskFactorsList}
+create={RiskFactorsCreate}
+edit={RiskFactorsEdit}
+recordRepresentation="riskFactor"
+icon={RiskFactorsIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
