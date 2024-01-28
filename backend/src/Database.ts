@@ -24,7 +24,7 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Books":[{"Title":"To Kill a Mockingbird","Author":"Harper Lee","ISBN":"978-0446310789","CopiesSold":40000000,"IssueDate":"1960-07-11","Genre":"Southern Gothic, Bildungsroman","Rating":"5.0"},{"Title":"1984","Author":"George Orwell","ISBN":"978-0451524935","CopiesSold":50000000,"IssueDate":"1949-06-08","Genre":"Dystopian, Political Fiction, Social Science Fiction","Rating":"4.7"},{"Title":"The Great Gatsby","Author":"F. Scott Fitzgerald","ISBN":"978-0743273565","CopiesSold":25000000,"IssueDate":"1925-04-10","Genre":"Tragedy, Realism","Rating":"4.4"}]};
+    let data: any = {"Books":[{"title":"The Great Gatsby","author":"F. Scott Fitzgerald","isbn":"9780439286230","copiesSold":20000000,"issueDate":"1925-04-10","genre":"Tragedy","rating":4.1},{"title":"To Kill a Mockingbird","author":"Harper Lee","isbn":"9780060935467","copiesSold":40000000,"issueDate":"1960-07-11","genre":"Southern Gothic, Bildungsroman","rating":4.3},{"title":"1984","author":"George Orwell","isbn":"9780451524935","copiesSold":30000000,"issueDate":"1949-06-08","genre":"Dystopian, Political Fiction, Social Science Fiction","rating":4.2}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
