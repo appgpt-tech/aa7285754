@@ -3,7 +3,7 @@
     import polyglotI18nProvider from "ra-i18n-polyglot";
     import enOriginal from 'ra-language-english';
 
-    const enResources = { resources: {"Loans":{"name":"loans","fields":{"accountNumber":"accountNumber","loanAmount":"loanAmount","productType":"productType","outstandingBalance":"outstandingBalance","id":"id"}},"RealEstate":{"name":"realEstate","fields":{"propertyType":"propertyType","value":"value","location":"location","floodRisk":"floodRisk","earthquakeRisk":"earthquakeRisk","fireRisk":"fireRisk","geolocation":"geolocation","id":"id"}},"RiskFactors":{"name":"riskFactors","fields":{"riskFactor":"riskFactor","riskWeight":"riskWeight","id":"id"}}}};
+    const enResources = { resources: {"Books":{"name":"books","fields":{"title":"title","author":"author","genre":"genre","bookCover":"bookCover","id":"id"}},"Authors":{"name":"authors","fields":{"name":"name","books":"books","id":"id"}},"Genres":{"name":"genres","fields":{"category":"category","id":"id"}}}};
 
 
     const en = mergeTranslations(enOriginal,enResources);
