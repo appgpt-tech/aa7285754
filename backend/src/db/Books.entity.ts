@@ -24,5 +24,8 @@ IssueDate: string;
 @Column({nullable: true})
 Genre: string;
 
+@Column({nullable: true})
+Rating: string;
+
 
 }
