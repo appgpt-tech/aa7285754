@@ -75,7 +75,7 @@ const App = () => (
 list={BooksList}
 create={BooksCreate}
 edit={BooksEdit}
-recordRepresentation="ISBN"
+recordRepresentation="isbn"
 icon={BooksIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
