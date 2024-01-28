@@ -8,12 +8,12 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { LoansList, LoansCreate, LoansEdit} from "./resources/Loans";
-import { RealEstateList, RealEstateCreate, RealEstateEdit} from "./resources/RealEstate";
-import { RiskFactorsList, RiskFactorsCreate, RiskFactorsEdit} from "./resources/RiskFactors";
-import LoansIcon from "@mui/icons-material/MonetizationOn";
-import RealEstateIcon from "@mui/icons-material/Home";
-import RiskFactorsIcon from "@mui/icons-material/Warning"; 
+import { BooksList, BooksCreate, BooksEdit} from "./resources/Books";
+import { AuthorsList, AuthorsCreate, AuthorsEdit} from "./resources/Authors";
+import { GenresList, GenresCreate, GenresEdit} from "./resources/Genres";
+import BooksIcon from "@mui/icons-material/LibraryBooks";
+import AuthorsIcon from "@mui/icons-material/Person";
+import GenresIcon from "@mui/icons-material/Category"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -75,24 +75,24 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="Loans" options={{label:"loans"}} 
-list={LoansList}
-create={LoansCreate}
-edit={LoansEdit}
-recordRepresentation="id"
-icon={LoansIcon}/>
-<Resource name="RealEstate" options={{label:"realEstate"}} 
-list={RealEstateList}
-create={RealEstateCreate}
-edit={RealEstateEdit}
-recordRepresentation="geolocation"
-icon={RealEstateIcon}/>
-<Resource name="RiskFactors" options={{label:"riskFactors"}} 
-list={RiskFactorsList}
-create={RiskFactorsCreate}
-edit={RiskFactorsEdit}
-recordRepresentation="riskFactor"
-icon={RiskFactorsIcon}/>
+    <Resource name="Books" options={{label:"books"}} 
+list={BooksList}
+create={BooksCreate}
+edit={BooksEdit}
+recordRepresentation="title"
+icon={BooksIcon}/>
+<Resource name="Authors" options={{label:"authors"}} 
+list={AuthorsList}
+create={AuthorsCreate}
+edit={AuthorsEdit}
+recordRepresentation="name"
+icon={AuthorsIcon}/>
+<Resource name="Genres" options={{label:"genres"}} 
+list={GenresList}
+create={GenresCreate}
+edit={GenresEdit}
+recordRepresentation="category"
+icon={GenresIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
