@@ -44,6 +44,7 @@ export class DBConfiguration {
   public entities: string[];
   public logging: boolean;
   public synchronize: boolean;
+  public dropSchema: boolean;
   constructor() {
     let dbConfiguration: any = JSON.parse(
       process.env.POSTGRESQL_CONFIGURATION || ""
@@ -57,6 +58,7 @@ export class DBConfiguration {
     this.entities = dbConfiguration.entitiesArray;
     this.logging = dbConfiguration.logging;
     this.synchronize = dbConfiguration.synchronize;
+    this.dropSchema = dbConfiguration.dropSchema;
   }
 }
 class SupertokensAppInfo {
