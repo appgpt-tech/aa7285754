@@ -41,17 +41,18 @@ const ListActions = () => (
 );
 const BooksTitle = () => {
   const record = useRecordContext();
-  return <span>Books {record ? `"${ record.id }"` : ""}</span>;
+  return <span>Books {record ? `"${ record.ISBN }"` : ""}</span>;
 };
 
 export const BooksList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="bookTitle" />
-<TextField source="releaseDate" />
-<TextField source="numberOfBooksSold" />
-<TextField source="author" />
-<TextField source="numberOfEditions" />
+          <TextField source="Title" />
+<TextField source="Author" />
+<TextField source="ISBN" />
+<TextField source="CopiesSold" />
+<TextField source="IssueDate" />
+<TextField source="Genre" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -61,11 +62,12 @@ export const BooksList = () => (
 export const BooksEdit = () => (
                     <Edit title={<BooksTitle />}>
                       <SimpleForm>
-                          <TextInput source="bookTitle"   />
-<TextInput source="releaseDate"   />
-<TextInput source="numberOfBooksSold"   />
-<TextInput source="author"   />
-<TextInput source="numberOfEditions"   />
+                          <TextInput source="Title"   />
+<TextInput source="Author"   />
+<TextInput source="ISBN"   />
+<TextInput source="CopiesSold"   />
+<TextInput source="IssueDate"   />
+<TextInput source="Genre"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -74,11 +76,12 @@ export const BooksEdit = () => (
 export const BooksCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="bookTitle"   />
-<TextInput source="releaseDate"   />
-<TextInput source="numberOfBooksSold"   />
-<TextInput source="author"   />
-<TextInput source="numberOfEditions"   />
+                                        <TextInput source="Title"   />
+<TextInput source="Author"   />
+<TextInput source="ISBN"   />
+<TextInput source="CopiesSold"   />
+<TextInput source="IssueDate"   />
+<TextInput source="Genre"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -86,6 +89,7 @@ export const BooksCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
+,
 ,
 ,
 ,
