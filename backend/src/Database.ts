@@ -26,7 +26,7 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Books":[{"Title":"The Great Gatsby","Author":"F. Scott Fitzgerald","Genre":"Fiction","BookCover":"URL for Great Gatsby cover Image"},{"Title":"To Kill a Mockingbird","Author":"Harper Lee","Genre":"Fiction","BookCover":"URL for To Kill a Mockingbird cover Image"},{"Title":"1984","Author":"George Orwell","Genre":"Dystopian","BookCover":"URL for 1984 cover Image"}],"Authors":[{"Name":"F. Scott Fitzgerald","Books":"The Great Gatsby, Tender is the Night"},{"Name":"Harper Lee","Books":"To Kill a Mockingbird"},{"Name":"George Orwell","Books":"1984, Animal Farm"}],"Genres":[{"Category":"Fiction"},{"Category":"Dystopian"},{"Category":"Fantasy"}]};
+    let data: any = {"Books":[{"title":"Sample Book Title 1","authorName":"Sample Author 1","genre":"Sample Genre 1","bookCover":"Sample Book Cover 1"},{"title":"Sample Book Title 2","authorName":"Sample Author 2","genre":"Sample Genre 2","bookCover":"Sample Book Cover 2"},{"title":"Sample Book Title 3","authorName":"Sample Author 3","genre":"Sample Genre 3","bookCover":"Sample Book Cover 3"}],"Authors":[{"name":"Sample Author Name 1","books":"Sample Book 1"},{"name":"Sample Author Name 2","books":"Sample Book 2"},{"name":"Sample Author Name 3","books":"Sample Book 3"}],"Genres":[{"category":"Sample Genre Category 1"},{"category":"Sample Genre Category 2"},{"category":"Sample Genre Category 3"}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
