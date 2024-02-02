@@ -13,7 +13,7 @@ import { AuthorsList, AuthorsCreate, AuthorsEdit} from "./resources/Authors";
 import { GenresList, GenresCreate, GenresEdit} from "./resources/Genres";
 import BooksIcon from "@mui/icons-material/Book";
 import AuthorsIcon from "@mui/icons-material/Person";
-import GenresIcon from "@mui/icons-material/MusicNote"; 
+import GenresIcon from "@mui/icons-material/Category"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -91,7 +91,7 @@ icon={AuthorsIcon}/>
 list={GenresList}
 create={GenresCreate}
 edit={GenresEdit}
-recordRepresentation="gender"
+recordRepresentation="genre"
 icon={GenresIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
