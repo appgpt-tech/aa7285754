@@ -41,16 +41,16 @@ const ListActions = () => (
 );
 const BooksTitle = () => {
   const record = useRecordContext();
-  return <span>Books {record ? `"${ record.id }"` : ""}</span>;
+  return <span>Books {record ? `"${ record.title }"` : ""}</span>;
 };
 
 export const BooksList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="Title" />
-<TextField source="Author" />
-<TextField source="Genre" />
-<TextField source="BookCover" />
+          <TextField source="title" />
+<TextField source="authorName" />
+<TextField source="genre" />
+<TextField source="bookCover" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -60,10 +60,10 @@ export const BooksList = () => (
 export const BooksEdit = () => (
                     <Edit title={<BooksTitle />}>
                       <SimpleForm>
-                          <TextInput source="Title"   />
-<TextInput source="Author"   />
-<TextInput source="Genre"   />
-<TextInput source="BookCover"   />
+                          <TextInput source="title"   />
+<TextInput source="authorName"   />
+<TextInput source="genre"   />
+<TextInput source="bookCover"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -72,10 +72,10 @@ export const BooksEdit = () => (
 export const BooksCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="Title"   />
-<TextInput source="Author"   />
-<TextInput source="Genre"   />
-<TextInput source="BookCover"   />
+                                        <TextInput source="title"   />
+<TextInput source="authorName"   />
+<TextInput source="genre"   />
+<TextInput source="bookCover"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
