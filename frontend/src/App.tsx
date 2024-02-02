@@ -11,9 +11,9 @@ import data from "./data";
 import { BooksList, BooksCreate, BooksEdit} from "./resources/Books";
 import { AuthorsList, AuthorsCreate, AuthorsEdit} from "./resources/Authors";
 import { GenresList, GenresCreate, GenresEdit} from "./resources/Genres";
-import BooksIcon from "@mui/icons-material/Book";
-import AuthorsIcon from "@mui/icons-material/Person";
-import GenresIcon from "@mui/icons-material/Category"; 
+import BooksIcon from "@mui/icons-material/BookOutlined";
+import AuthorsIcon from "@mui/icons-material/PeopleOutline";
+import GenresIcon from "@mui/icons-material/CategoryOutlined"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -79,19 +79,19 @@ const App = () => (
 list={BooksList}
 create={BooksCreate}
 edit={BooksEdit}
-recordRepresentation="title"
+recordRepresentation="id"
 icon={BooksIcon}/>
 <Resource name="Authors" options={{label:"authors"}} 
 list={AuthorsList}
 create={AuthorsCreate}
 edit={AuthorsEdit}
-recordRepresentation="name"
+recordRepresentation="id"
 icon={AuthorsIcon}/>
 <Resource name="Genres" options={{label:"genres"}} 
 list={GenresList}
 create={GenresCreate}
 edit={GenresEdit}
-recordRepresentation="category"
+recordRepresentation="id"
 icon={GenresIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
