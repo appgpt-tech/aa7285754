@@ -7,7 +7,7 @@ export class GenresEntity {
   id: number;
 
   @Column({nullable: true})
-category: string;
+Category: string;
 
 
 }
