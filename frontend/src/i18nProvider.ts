@@ -4,8 +4,8 @@
     import enOriginal from 'ra-language-english';
 import frOriginal from 'ra-language-french';
 
-    const enResources = { resources: {"Books":{"name":"Books","fields":{"title":"Title","authorName":"Author Name","genre":"Genre","bookCover":"Book Cover","id":"id"}},"Authors":{"name":"Authors","fields":{"authorName":"Author Name","birthCountry":"Birth Country","id":"id"}},"Genres":{"name":"Genres","fields":{"genre":"Genre","category":"Category","id":"id"}}}};
-const frResources = { resources: {"Books":{"name":"Livres","fields":{"title":"Titre","authorName":"Nom de l'auteur","genre":"Genre","bookCover":"Couverture du livre","id":"id"}},"Authors":{"name":"Auteurs","fields":{"authorName":"Nom de l'auteur","birthCountry":"Pays de naissance","id":"id"}},"Genres":{"name":"Genres","fields":{"genre":"Genre","category":"Categorie","id":"id"}}}};
+    const enResources = { resources: {"Projects":{"name":"Projects","fields":{"projectName":"Project Name","description":"Description","id":"id"}},"Tasks":{"name":"Tasks","fields":{"taskName":"Task Name","description":"Description","id":"id"}},"Assignees":{"name":"Assignees","fields":{"assigneeName":"Assignee Name","role":"Role","id":"id"}}}};
+const frResources = { resources: {"Projects":{"name":"Projets","fields":{"projectName":"Nom du projet","description":"La description","id":"id"}},"Tasks":{"name":"Tâches","fields":{"taskName":"Nom de la tâche","description":"La description","id":"id"}},"Assignees":{"name":"Affectés","fields":{"assigneeName":"Nom de l'affecté","role":"Rôle","id":"id"}}}};
 
 
     const en = mergeTranslations(enOriginal,enResources);
