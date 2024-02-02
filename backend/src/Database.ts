@@ -26,7 +26,7 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Books":[{"title":"Gone with the Wind","author":"Margaret Mitchell","genre":"Historical","bookCover":"URL1"},{"title":"To Kill a Mockingbird","author":"Harper Lee","genre":"Drama","bookCover":"URL2"},{"title":"The Great Gatsby","author":"F. Scott Fitzgerald","genre":"Novel","bookCover":"URL3"}],"Authors":[{"name":"Margaret Mitchell","books":"Gone with the Wind"},{"name":"Harper Lee","books":"To Kill a Mockingbird"},{"name":"F. Scott Fitzgerald","books":"The Great Gatsby"}],"Genres":[{"category":"Historical"},{"category":"Drama"},{"category":"Novel"}]};
+    let data: any = {"Books":[{"title":"The Great Gatsby","author":"F. Scott Fitzgerald","genre":"Novel","bookCover":"URL_to_book_cover"},{"title":"To Kill a Mockingbird","author":"Harper Lee","genre":"Southern Gothic, Bildungsroman","bookCover":"URL_to_book_cover"},{"title":"1984","author":"George Orwell","genre":"Dystopian, political fiction, social science fiction","bookCover":"URL_to_book_cover"}],"Authors":[{"name":"F. Scott Fitzgerald","books":"The Great Gatsby"},{"name":"Harper Lee","books":"To Kill a Mockingbird"},{"name":"George Orwell","books":"1984"}],"Genres":[{"category":"Novel"},{"category":"Southern Gothic, Bildungsroman"},{"category":"Dystopian, political fiction, social science fiction"}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
