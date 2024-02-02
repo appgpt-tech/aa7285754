@@ -41,13 +41,13 @@ const ListActions = () => (
 );
 const GenresTitle = () => {
   const record = useRecordContext();
-  return <span>Genres {record ? `"${ record.category }"` : ""}</span>;
+  return <span>Genres {record ? `"${ record.id }"` : ""}</span>;
 };
 
 export const GenresList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="category" />
+          <TextField source="Category" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -57,7 +57,7 @@ export const GenresList = () => (
 export const GenresEdit = () => (
                     <Edit title={<GenresTitle />}>
                       <SimpleForm>
-                          <TextInput source="category"   />
+                          <TextInput source="Category"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -66,7 +66,7 @@ export const GenresEdit = () => (
 export const GenresCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="category"   />
+                                        <TextInput source="Category"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
