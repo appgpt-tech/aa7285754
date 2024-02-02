@@ -26,7 +26,7 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Books":[{"title":"The Hobbit","author":"J.R.R. Tolkien","genre":"Fantasy","bookCover":"https://example.com/thehobbit.jpg"},{"title":"1984","author":"George Orwell","genre":"Science Fiction","bookCover":"https://example.com/1984.jpg"},{"title":"To Kill a Mockingbird","author":"Harper Lee","genre":"Fiction","bookCover":"https://example.com/mockingbird.jpg"}],"Authors":[{"name":"J.R.R. Tolkien","books":["The Hobbit","The Lord of the Rings"]},{"name":"George Orwell","books":["1984","Animal Farm"]},{"name":"Harper Lee","books":["To Kill a Mockingbird"]}],"Genres":[{"category":"Fantasy"},{"category":"Science Fiction"},{"category":"Fiction"}]};
+    let data: any = {"Books":[{"title":"The Great Gatsby","author":"F. Scott Fitzgerald","genre":"Novel","bookCover":"https://link_to_example_image.com"},{"title":"To Kill a Mockingbird","author":"Harper Lee","genre":"Southern Gothic, Bildungsroman","bookCover":"https://link_to_example_image.com"},{"title":"1984","author":"George Orwell","genre":"Dystopian, political fiction","bookCover":"https://link_to_example_image.com"}],"Authors":[{"name":"F. Scott Fitzgerald","books":"The Great Gatsby"},{"name":"Harper Lee","books":"To Kill a Mockingbird"},{"name":"George Orwell","books":"1984"}],"Genres":[{"category":"Novel"},{"category":"Southern Gothic, Bildungsroman"},{"category":"Dystopian, political fiction"}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
