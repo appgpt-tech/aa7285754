@@ -11,7 +11,7 @@ import data from "./data";
 import { BooksList, BooksCreate, BooksEdit} from "./resources/Books";
 import { AuthorsList, AuthorsCreate, AuthorsEdit} from "./resources/Authors";
 import { GenresList, GenresCreate, GenresEdit} from "./resources/Genres";
-import BooksIcon from "@mui/icons-material/Book";
+import BooksIcon from "@mui/icons-material/LibraryBooks";
 import AuthorsIcon from "@mui/icons-material/People";
 import GenresIcon from "@mui/icons-material/Category"; 
 // SUPERTOKENS
@@ -75,19 +75,19 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="Books" options={{label:"Books"}} 
+    <Resource name="Books" options={{label:"books"}} 
 list={BooksList}
 create={BooksCreate}
 edit={BooksEdit}
 recordRepresentation="title"
 icon={BooksIcon}/>
-<Resource name="Authors" options={{label:"Authors"}} 
+<Resource name="Authors" options={{label:"authors"}} 
 list={AuthorsList}
 create={AuthorsCreate}
 edit={AuthorsEdit}
 recordRepresentation="authorName"
 icon={AuthorsIcon}/>
-<Resource name="Genres" options={{label:"Genres"}} 
+<Resource name="Genres" options={{label:"genres"}} 
 list={GenresList}
 create={GenresCreate}
 edit={GenresEdit}
