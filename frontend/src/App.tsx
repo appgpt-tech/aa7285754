@@ -12,7 +12,7 @@ import { BooksList, BooksCreate, BooksEdit} from "./resources/Books";
 import { AuthorsList, AuthorsCreate, AuthorsEdit} from "./resources/Authors";
 import { GenresList, GenresCreate, GenresEdit} from "./resources/Genres";
 import BooksIcon from "@mui/icons-material/LibraryBooks";
-import AuthorsIcon from "@mui/icons-material/People";
+import AuthorsIcon from "@mui/icons-material/PersonOutline";
 import GenresIcon from "@mui/icons-material/Category"; 
 // SUPERTOKENS
 import React from "react";
@@ -85,7 +85,7 @@ icon={BooksIcon}/>
 list={AuthorsList}
 create={AuthorsCreate}
 edit={AuthorsEdit}
-recordRepresentation="authorName"
+recordRepresentation="name"
 icon={AuthorsIcon}/>
 <Resource name="Genres" options={{label:"genres"}} 
 list={GenresList}
