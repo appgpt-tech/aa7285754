@@ -26,7 +26,7 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Books":[{"title":"Generated Title 1","author":"Generated Author 1","genre":"Generated Genre 1","bookCover":"Generated Book Cover 1"}],"Authors":[{"name":"Generated Name 1","books":"Generated Book 1"}],"Genres":[{"category":"Generated Category 1"}]};
+    let data: any = {"Books":[{"title":"Book 1","authorName":"Author 1","genre":"Genre 1","bookCover":"Cover 1"},{"title":"Book 2","authorName":"Author 2","genre":"Genre 2","bookCover":"Cover 2"},{"title":"Book 3","authorName":"Author 3","genre":"Genre 3","bookCover":"Cover 3"}],"Authors":[{"authorName":"Author 1","birthCountry":"Country 1"},{"authorName":"Author 2","birthCountry":"Country 2"},{"authorName":"Author 3","birthCountry":"Country 3"}],"Genres":[{"gender":"Gender 1","category":"Category 1"},{"gender":"Gender 2","category":"Category 2"},{"gender":"Gender 3","category":"Category 3"}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
