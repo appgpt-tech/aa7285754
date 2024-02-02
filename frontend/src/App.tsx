@@ -8,12 +8,12 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { BooksList, BooksCreate, BooksEdit} from "./resources/Books";
-import { AuthorsList, AuthorsCreate, AuthorsEdit} from "./resources/Authors";
-import { GenresList, GenresCreate, GenresEdit} from "./resources/Genres";
-import BooksIcon from "@mui/icons-material/Book";
-import AuthorsIcon from "@mui/icons-material/Person";
-import GenresIcon from "@mui/icons-material/Category"; 
+import { ProjectsList, ProjectsCreate, ProjectsEdit} from "./resources/Projects";
+import { TasksList, TasksCreate, TasksEdit} from "./resources/Tasks";
+import { AssigneesList, AssigneesCreate, AssigneesEdit} from "./resources/Assignees";
+import ProjectsIcon from "@mui/icons-material/WorkOutline";
+import TasksIcon from "@mui/icons-material/Assignment";
+import AssigneesIcon from "@mui/icons-material/PeopleOutline"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -75,24 +75,24 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="Books" options={{label:"books"}} 
-list={BooksList}
-create={BooksCreate}
-edit={BooksEdit}
-recordRepresentation="title"
-icon={BooksIcon}/>
-<Resource name="Authors" options={{label:"authors"}} 
-list={AuthorsList}
-create={AuthorsCreate}
-edit={AuthorsEdit}
-recordRepresentation="authorName"
-icon={AuthorsIcon}/>
-<Resource name="Genres" options={{label:"genres"}} 
-list={GenresList}
-create={GenresCreate}
-edit={GenresEdit}
-recordRepresentation="genre"
-icon={GenresIcon}/>
+    <Resource name="Projects" options={{label:"projects"}} 
+list={ProjectsList}
+create={ProjectsCreate}
+edit={ProjectsEdit}
+recordRepresentation="projectName"
+icon={ProjectsIcon}/>
+<Resource name="Tasks" options={{label:"tasks"}} 
+list={TasksList}
+create={TasksCreate}
+edit={TasksEdit}
+recordRepresentation="taskName"
+icon={TasksIcon}/>
+<Resource name="Assignees" options={{label:"assignees"}} 
+list={AssigneesList}
+create={AssigneesCreate}
+edit={AssigneesEdit}
+recordRepresentation="assigneeName"
+icon={AssigneesIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
