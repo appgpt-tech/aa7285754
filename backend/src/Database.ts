@@ -26,7 +26,7 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Books":[{"title":"The Great Gatsby","author":"F. Scott Fitzgerald","genre":"Novel","bookCover":"URL_to_book_cover"},{"title":"To Kill a Mockingbird","author":"Harper Lee","genre":"Southern Gothic, Bildungsroman","bookCover":"URL_to_book_cover"},{"title":"1984","author":"George Orwell","genre":"Dystopian, political fiction, social science fiction","bookCover":"URL_to_book_cover"}],"Authors":[{"name":"F. Scott Fitzgerald","books":"The Great Gatsby"},{"name":"Harper Lee","books":"To Kill a Mockingbird"},{"name":"George Orwell","books":"1984"}],"Genres":[{"category":"Novel"},{"category":"Southern Gothic, Bildungsroman"},{"category":"Dystopian, political fiction, social science fiction"}]};
+    let data: any = {"Books":[{"Title":"The Great Gatsby","Author":"F. Scott Fitzgerald","Genre":"Fiction","BookCover":"URL for Great Gatsby cover Image"},{"Title":"To Kill a Mockingbird","Author":"Harper Lee","Genre":"Fiction","BookCover":"URL for To Kill a Mockingbird cover Image"},{"Title":"1984","Author":"George Orwell","Genre":"Dystopian","BookCover":"URL for 1984 cover Image"}],"Authors":[{"Name":"F. Scott Fitzgerald","Books":"The Great Gatsby, Tender is the Night"},{"Name":"Harper Lee","Books":"To Kill a Mockingbird"},{"Name":"George Orwell","Books":"1984, Animal Farm"}],"Genres":[{"Category":"Fiction"},{"Category":"Dystopian"},{"Category":"Fantasy"}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
