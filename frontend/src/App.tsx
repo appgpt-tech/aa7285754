@@ -11,8 +11,8 @@ import data from "./data";
 import { BooksList, BooksCreate, BooksEdit} from "./resources/Books";
 import { AuthorsList, AuthorsCreate, AuthorsEdit} from "./resources/Authors";
 import { GenresList, GenresCreate, GenresEdit} from "./resources/Genres";
-import BooksIcon from "@mui/icons-material/LibraryBooks";
-import AuthorsIcon from "@mui/icons-material/PersonPin";
+import BooksIcon from "@mui/icons-material/Book";
+import AuthorsIcon from "@mui/icons-material/Person";
 import GenresIcon from "@mui/icons-material/Category"; 
 // SUPERTOKENS
 import React from "react";
