@@ -4,8 +4,8 @@
     import enOriginal from 'ra-language-english';
 import frOriginal from 'ra-language-french';
 
-    const enResources = { resources: {"Books":{"name":"Books","fields":{"title":"title","author":"author","genre":"genre","bookCover":"bookCover","id":"id"}},"Authors":{"name":"Authors","fields":{"name":"name","books":"books","id":"id"}},"Genres":{"name":"Genres","fields":{"category":"category","id":"id"}}}};
-const frResources = { resources: {"Books":{"name":"Livres","fields":{"title":"title","author":"author","genre":"genre","bookCover":"bookCover","id":"id"}},"Authors":{"name":"Auteurs","fields":{"name":"name","books":"books","id":"id"}},"Genres":{"name":"Genres","fields":{"category":"category","id":"id"}}}};
+    const enResources = { resources: {"Books":{"name":"Books","fields":{"Title":"Title","Author":"Author","Genre":"Genre","BookCover":"Book Cover","id":"id"}},"Authors":{"name":"Authors","fields":{"Name":"Name","Books":"Books","id":"id"}},"Genres":{"name":"Genres","fields":{"Category":"Category","id":"id"}}}};
+const frResources = { resources: {"Books":{"name":"Livres","fields":{"Title":"Titre","Author":"Auteur","Genre":"Le genre","BookCover":"Couverture du livre","id":"id"}},"Authors":{"name":"Auteurs","fields":{"Name":"Nom","Books":"Livres","id":"id"}},"Genres":{"name":"Genres","fields":{"Category":"Categorie","id":"id"}}}};
 
 
     const en = mergeTranslations(enOriginal,enResources);
