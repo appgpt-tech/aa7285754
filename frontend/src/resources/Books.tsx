@@ -48,8 +48,8 @@ export const BooksList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
           <TextField source="title" />
-<ReferenceField source="author" reference="Authors"  />
-<ReferenceField source="genre" reference="Genres"  />
+<ReferenceField source="author" reference="authors"  />
+<ReferenceField source="genre" reference="genres"  />
 <TextField source="bookCover" />
 <NumberField source="id" /><EditButton />
 
@@ -61,8 +61,8 @@ export const BooksEdit = () => (
                     <Edit title={<BooksTitle />}>
                       <SimpleForm>
                           <TextInput source="title"   />
-<ReferenceInput source="author"  reference="Authors"   />
-<ReferenceInput source="genre"  reference="Genres"   />
+<ReferenceInput source="author"  reference="authors"   />
+<ReferenceInput source="genre"  reference="genres"   />
 <TextInput source="bookCover"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
@@ -73,8 +73,8 @@ export const BooksCreate = () => (
                                   <Create>
                                     <SimpleForm>
                                         <TextInput source="title"   />
-<ReferenceInput source="author"  reference="Authors"   />
-<ReferenceInput source="genre"  reference="Genres"   />
+<ReferenceInput source="author"  reference="authors"   />
+<ReferenceInput source="genre"  reference="genres"   />
 <TextInput source="bookCover"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
@@ -84,8 +84,8 @@ export const BooksCreate = () => (
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
 ,
-<ReferenceInput source="author" label="author" reference="Authors"   alwaysOn/>,
-<ReferenceInput source="genre" label="genre" reference="Genres"   alwaysOn/>,
+<ReferenceInput source="author" label="author" reference="authors"   alwaysOn/>,
+<ReferenceInput source="genre" label="genre" reference="genres"   alwaysOn/>,
 ,
 
     ];
