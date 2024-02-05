@@ -49,6 +49,7 @@ export const AssigneesList = () => (
         <DatagridConfigurable>
           <TextField source="assigneeName" />
 <TextField source="role" />
+<TextField source="email" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -60,6 +61,7 @@ export const AssigneesEdit = () => (
                       <SimpleForm>
                           <TextInput source="assigneeName"   />
 <TextInput source="role"   />
+<TextInput source="email"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -70,6 +72,7 @@ export const AssigneesCreate = () => (
                                     <SimpleForm>
                                         <TextInput source="assigneeName"   />
 <TextInput source="role"   />
+<TextInput source="email"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -77,6 +80,7 @@ export const AssigneesCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
+,
 ,
 ,
 
