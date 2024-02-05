@@ -49,9 +49,6 @@ export const ProjectsList = () => (
         <DatagridConfigurable>
           <TextField source="projectName" />
 <TextField source="description" />
-<DateField source="startDate" />
-<DateField source="endDate" />
-<TextField source="status" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -63,9 +60,6 @@ export const ProjectsEdit = () => (
                       <SimpleForm>
                           <TextInput source="projectName"   />
 <TextInput source="description"   />
-<DateInput source="startDate"   />
-<DateInput source="endDate"   />
-<TextInput source="status"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -76,9 +70,6 @@ export const ProjectsCreate = () => (
                                     <SimpleForm>
                                         <TextInput source="projectName"   />
 <TextInput source="description"   />
-<DateInput source="startDate"   />
-<DateInput source="endDate"   />
-<TextInput source="status"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -86,9 +77,6 @@ export const ProjectsCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
-,
-,
 ,
 ,
 
