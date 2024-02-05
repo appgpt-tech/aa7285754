@@ -12,5 +12,14 @@ projectName: string;
 @Column({nullable: true})
 description: string;
 
+@Column({nullable: true})
+startDate: string;
+
+@Column({nullable: true})
+endDate: string;
+
+@Column({nullable: true})
+status: string;
+
 
 }
