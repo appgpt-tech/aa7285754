@@ -12,5 +12,8 @@ assigneeName: string;
 @Column({nullable: true})
 role: string;
 
+@Column({nullable: true})
+email: string;
+
 
 }
