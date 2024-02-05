@@ -11,9 +11,9 @@ import data from "./data";
 import { ProjectsList, ProjectsCreate, ProjectsEdit} from "./resources/Projects";
 import { TasksList, TasksCreate, TasksEdit} from "./resources/Tasks";
 import { AssigneesList, AssigneesCreate, AssigneesEdit} from "./resources/Assignees";
-import ProjectsIcon from "@mui/icons-material/WorkOutline";
-import TasksIcon from "@mui/icons-material/Assignment";
-import AssigneesIcon from "@mui/icons-material/PeopleOutline"; 
+import ProjectsIcon from "@mui/icons-material/EmojiObjects";
+import TasksIcon from "@mui/icons-material/Task";
+import AssigneesIcon from "@mui/icons-material/People"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
