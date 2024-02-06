@@ -7,13 +7,13 @@ export class bookEntity {
   id: number;
 
   @Column({nullable: true})
-title: string;
+title: number;
 
 @Column({nullable: true})
-isbn: string;
+isbn: number;
 
 @Column({nullable: true})
-author: string;
+author: number;
 
 
 }
