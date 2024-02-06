@@ -7,16 +7,19 @@ export class booksEntity {
   id: number;
 
   @Column({nullable: true})
-title: string;
+bookTitle: string;
+
+@Column({nullable: true})
+releaseDate: Date;
+
+@Column({nullable: true})
+numberOfBooksSold: number;
 
 @Column({nullable: true})
 author: string;
 
 @Column({nullable: true})
-rating: string;
-
-@Column({nullable: true})
-copiesSold: string;
+numberOfEditions: number;
 
 
 }
