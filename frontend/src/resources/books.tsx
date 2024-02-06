@@ -41,16 +41,17 @@ const ListActions = () => (
 );
 const booksTitle = () => {
   const record = useRecordContext();
-  return <span>books {record ? `"${ record.title }"` : ""}</span>;
+  return <span>books {record ? `"${ record.bookTitle }"` : ""}</span>;
 };
 
 export const booksList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="title" />
-<TextField source="author" />
-<NumberField source="rating" />
-<NumberField source="copiesSold" />
+          <TextField source="bookTitle" />
+<DateField source="releaseDate" />
+<NumberField source="numberOfBooksSold" />
+<ReferenceField source="author" reference="authors"  />
+<NumberField source="numberOfEditions" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -60,10 +61,11 @@ export const booksList = () => (
 export const booksEdit = () => (
                     <Edit title={<booksTitle />}>
                       <SimpleForm>
-                          <TextInput source="title"   />
-<TextInput source="author"   />
-<NumberInput source="rating"   />
-<NumberInput source="copiesSold"   />
+                          <TextInput source="bookTitle"   />
+<DateInput source="releaseDate"   />
+<NumberInput source="numberOfBooksSold"   />
+<ReferenceInput source="author"  reference="authors"   />
+<NumberInput source="numberOfEditions"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -72,10 +74,11 @@ export const booksEdit = () => (
 export const booksCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="title"   />
-<TextInput source="author"   />
-<NumberInput source="rating"   />
-<NumberInput source="copiesSold"   />
+                                        <TextInput source="bookTitle"   />
+<DateInput source="releaseDate"   />
+<NumberInput source="numberOfBooksSold"   />
+<ReferenceInput source="author"  reference="authors"   />
+<NumberInput source="numberOfEditions"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -86,6 +89,7 @@ const ResourceFilters = [
 ,
 ,
 ,
+<ReferenceInput source="author" label="author" reference="authors"   alwaysOn/>,
 ,
 
     ];
