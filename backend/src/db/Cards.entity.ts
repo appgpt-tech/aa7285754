@@ -10,7 +10,7 @@ export class CardsEntity {
 cardId: string;
 
 @Column({nullable: true})
-setid: string;
+setid: number;
 
 @Column({nullable: true})
 cardName: string;
