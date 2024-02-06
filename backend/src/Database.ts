@@ -3,9 +3,7 @@ import { DataSource } from "typeorm";
 import { DBConfiguration } from "./Configuration";
 import { SettingsEntity } from "./db/Settings.entity";
 //autogenerate imports based on resources
-import { ProjectsEntity } from "./db/Projects.entity";
-import { TasksEntity } from "./db/Tasks.entity";
-import { AssigneesEntity } from "./db/Assignees.entity";
+import { booksEntity } from "./db/books.entity";
 
 export class Database {
   static dbConfiguration: DBConfiguration;
@@ -16,7 +14,7 @@ export class Database {
     let dbConfig: any = dbConfiguration as any;
     //Autogenerate entities array from resource names
 
-    dbConfig.entities = [SettingsEntity, ProjectsEntity, TasksEntity, AssigneesEntity];
+    dbConfig.entities = [SettingsEntity, booksEntity];
     Database.ds = new DataSource(dbConfig);
     await Database.ds.initialize();
 
@@ -26,16 +24,14 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Projects":[{"projectName":"Banking software upgrade","description":"Upgrade the Internal Banking System"},{"projectName":"Customer Portal Redesign","description":"Redesign of Online Customer banking portal"},{"projectName":"Regulatory Compliance check","description":"Ensure banking regulations compliance"}],"Tasks":[{"taskName":"Identify upgrade requirements","description":"Identify the requirements for the banking software upgrade"},{"taskName":"Design new customer portal","description":"Design the new user interface for customer portal"},{"taskName":"Review banking regulations","description":"Review latest banking regulations for compliance"}],"Assignees":[{"assigneeName":"John Doe","role":"Project Manager","email":"johndoe@example.com"},{"assigneeName":"Jane Smith","role":"Designer","email":"janesmith@example.com"},{"assigneeName":"Robert Johnson","role":"Compliance Officer","email":"robertjohnson@example.com"}]};
+    let data: any = {"books":[]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
     //forcing app recreation
     if (true){
       console.log('   Seeding database...');
-      await this.SeedResource("ProjectsEntity", data.Projects);
-await this.SeedResource("TasksEntity", data.Tasks);
-await this.SeedResource("AssigneesEntity", data.Assignees); 
+      await this.SeedResource("booksEntity", data.books); 
       await this.SeedResource("SettingsEntity", {
         settingname: "isSeeded",
         settingvalue: "true",
