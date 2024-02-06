@@ -41,7 +41,7 @@ const ListActions = () => (
 );
 const bookTitle = () => {
   const record = useRecordContext();
-  return <span>book {record ? `"${ record.isbn }"` : ""}</span>;
+  return <span>book {record ? `"${ record.title }"` : ""}</span>;
 };
 
 export const bookList = () => (
