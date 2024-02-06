@@ -51,16 +51,11 @@ export const CustomersList = () => (
 <TextField source="email" />
 <TextField source="password" />
 <TextField source="name" />
-<NumberField source="age" />
-<TextField source="gender" />
-<NumberField source="weight" />
-<NumberField source="height" />
-<TextField source="healthConditions" />
-<TextField source="goals" />
-<TextField source="dietaryPreferences" />
 <TextField source="billingAddress" />
+<TextField source="defaultShippingAddress" />
 <TextField source="country" />
 <TextField source="phone" />
+<TextField source="cartId" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -74,16 +69,11 @@ export const CustomersEdit = () => (
 <TextInput source="email"   />
 <TextInput source="password"   />
 <TextInput source="name"   />
-<NumberInput source="age"   />
-<TextInput source="gender"   />
-<NumberInput source="weight"   />
-<NumberInput source="height"   />
-<TextInput source="healthConditions"   />
-<TextInput source="goals"   />
-<TextInput source="dietaryPreferences"   />
 <TextInput source="billingAddress"   />
+<TextInput source="defaultShippingAddress"   />
 <TextInput source="country"   />
 <TextInput source="phone"   />
+<TextInput source="cartId"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -96,16 +86,11 @@ export const CustomersCreate = () => (
 <TextInput source="email"   />
 <TextInput source="password"   />
 <TextInput source="name"   />
-<NumberInput source="age"   />
-<TextInput source="gender"   />
-<NumberInput source="weight"   />
-<NumberInput source="height"   />
-<TextInput source="healthConditions"   />
-<TextInput source="goals"   />
-<TextInput source="dietaryPreferences"   />
 <TextInput source="billingAddress"   />
+<TextInput source="defaultShippingAddress"   />
 <TextInput source="country"   />
 <TextInput source="phone"   />
+<TextInput source="cartId"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -113,11 +98,6 @@ export const CustomersCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
-,
-,
-,
-,
 ,
 ,
 ,
