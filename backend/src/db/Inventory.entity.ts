@@ -13,7 +13,7 @@ userId: string;
 cardId: string;
 
 @Column({nullable: true})
-recordedDate: date;
+recordedDate: Date;
 
 
 }
