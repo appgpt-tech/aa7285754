@@ -25,7 +25,7 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"book":[{"title":67,"isbn":36,"author":2,"id":62},{"title":58,"isbn":23,"author":53,"id":8},{"title":75,"isbn":34,"author":12,"id":52},{"title":4,"isbn":91,"author":21,"id":63},{"title":18,"isbn":77,"author":26,"id":40}],"authors":[{"name":13,"gender":16,"dateOfBirth":38,"numberOfBooks":12,"id":18},{"name":76,"gender":91,"dateOfBirth":95,"numberOfBooks":27,"id":81},{"name":20,"gender":59,"dateOfBirth":60,"numberOfBooks":14,"id":95},{"name":89,"gender":69,"dateOfBirth":44,"numberOfBooks":81,"id":54},{"name":58,"gender":64,"dateOfBirth":43,"numberOfBooks":37,"id":30}]};
+    let data: any = {"book":[{"title":84,"isbn":56,"author":1,"id":16},{"title":67,"isbn":32,"author":2,"id":30},{"title":0,"isbn":63,"author":3,"id":8},{"title":73,"isbn":73,"author":4,"id":23},{"title":27,"isbn":31,"author":5,"id":26}],"authors":[{"name":37,"gender":30,"dateOfBirth":87,"numberOfBooks":69,"id":63},{"name":69,"gender":96,"dateOfBirth":45,"numberOfBooks":9,"id":69},{"name":2,"gender":68,"dateOfBirth":0,"numberOfBooks":38,"id":67},{"name":62,"gender":27,"dateOfBirth":85,"numberOfBooks":89,"id":27},{"name":83,"gender":97,"dateOfBirth":16,"numberOfBooks":99,"id":74}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
