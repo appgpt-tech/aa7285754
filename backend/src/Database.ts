@@ -3,8 +3,7 @@ import { DataSource } from "typeorm";
 import { DBConfiguration } from "./Configuration";
 import { SettingsEntity } from "./db/Settings.entity";
 //autogenerate imports based on resources
-import { bookEntity } from "./db/book.entity";
-import { authorsEntity } from "./db/authors.entity";
+import { booksEntity } from "./db/books.entity";
 
 export class Database {
   static dbConfiguration: DBConfiguration;
@@ -15,7 +14,7 @@ export class Database {
     let dbConfig: any = dbConfiguration as any;
     //Autogenerate entities array from resource names
 
-    dbConfig.entities = [SettingsEntity, bookEntity, authorsEntity];
+    dbConfig.entities = [SettingsEntity, booksEntity];
     Database.ds = new DataSource(dbConfig);
     await Database.ds.initialize();
 
@@ -25,15 +24,14 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"book":[{"title":"title 1","isbn":"isbn 1","author":"author 1","id":0},{"title":"title 2","isbn":"isbn 2","author":"author 2","id":90},{"title":"title 3","isbn":"isbn 3","author":"author 3","id":19},{"title":"title 4","isbn":"isbn 4","author":"author 4","id":40},{"title":"title 5","isbn":"isbn 5","author":"author 5","id":65}],"authors":[{"name":"name 1","gender":"gender 1","dateOfBirth":"2023-05-18T18:30:07.381Z","numberOfBooks":0,"id":81},{"name":"name 2","gender":"gender 2","dateOfBirth":"2023-03-03T08:24:05.797Z","numberOfBooks":20,"id":57},{"name":"name 3","gender":"gender 3","dateOfBirth":"2025-01-10T07:13:40.045Z","numberOfBooks":14,"id":3},{"name":"name 4","gender":"gender 4","dateOfBirth":"2024-09-29T05:10:35.512Z","numberOfBooks":81,"id":73},{"name":"name 5","gender":"gender 5","dateOfBirth":"2025-01-06T19:18:21.910Z","numberOfBooks":23,"id":70}]};
+    let data: any = {"books":[{"title":"Generated title for book 1","author":"Generated author for book 1","rating":"Generated rating for book 1","copiesSold":"Generated copies sold for book 1"},{"title":"Generated title for book 2","author":"Generated author for book 2","rating":"Generated rating for book 2","copiesSold":"Generated copies sold for book 2"},{"title":"Generated title for book 3","author":"Generated author for book 3","rating":"Generated rating for book 3","copiesSold":"Generated copies sold for book 3"}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
     //forcing app recreation
     if (true){
       console.log('   Seeding database...');
-      await this.SeedResource("bookEntity", data.book);
-await this.SeedResource("authorsEntity", data.authors); 
+      await this.SeedResource("booksEntity", data.books); 
       await this.SeedResource("SettingsEntity", {
         settingname: "isSeeded",
         settingvalue: "true",
