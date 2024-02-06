@@ -8,12 +8,8 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { ProjectsList, ProjectsCreate, ProjectsEdit} from "./resources/Projects";
-import { TasksList, TasksCreate, TasksEdit} from "./resources/Tasks";
-import { AssigneesList, AssigneesCreate, AssigneesEdit} from "./resources/Assignees";
-import ProjectsIcon from "@mui/icons-material/Eject";
-import TasksIcon from "@mui/icons-material/Masks";
-import AssigneesIcon from "@mui/icons-material/Person"; 
+import { booksList, booksCreate, booksEdit} from "./resources/books";
+import booksIcon from "@mui/icons-material/MenuBook"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -75,24 +71,12 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="Projects" options={{label:"projects"}} 
-list={ProjectsList}
-create={ProjectsCreate}
-edit={ProjectsEdit}
-recordRepresentation="projectName"
-icon={ProjectsIcon}/>
-<Resource name="Tasks" options={{label:"tasks"}} 
-list={TasksList}
-create={TasksCreate}
-edit={TasksEdit}
-recordRepresentation="taskName"
-icon={TasksIcon}/>
-<Resource name="Assignees" options={{label:"assignees"}} 
-list={AssigneesList}
-create={AssigneesCreate}
-edit={AssigneesEdit}
-recordRepresentation="assigneeName"
-icon={AssigneesIcon}/>
+    <Resource name="books" options={{label:"Books"}} 
+list={booksList}
+create={booksCreate}
+edit={booksEdit}
+recordRepresentation="title"
+icon={booksIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
