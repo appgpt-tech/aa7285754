@@ -19,7 +19,7 @@ import UsersIcon from "@mui/icons-material/Person";
 import CustomersIcon from "@mui/icons-material/Group";
 import WorkoutsIcon from "@mui/icons-material/FitnessCenter";
 import NutritionIcon from "@mui/icons-material/Restaurant";
-import HealthMetricsIcon from "@mui/icons-material/Favorite";
+import HealthMetricsIcon from "@mui/icons-material/Assessment";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SupportTicketsIcon from "@mui/icons-material/SupportAgent"; 
 // SUPERTOKENS
