@@ -41,16 +41,16 @@ const ListActions = () => (
 );
 const authorsTitle = () => {
   const record = useRecordContext();
-  return <span>authors {record ? `"${ record.authorName }"` : ""}</span>;
+  return <span>authors {record ? `"${ record.name }"` : ""}</span>;
 };
 
 export const authorsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="authorName" />
-<DateField source="dateOfBirth" />
-<TextField source="sex" />
-<TextField source="countryOfBirth" />
+          <NumberField source="name" />
+<NumberField source="gender" />
+<NumberField source="dateOfBirth" />
+<NumberField source="numberOfBooks" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -60,10 +60,10 @@ export const authorsList = () => (
 export const authorsEdit = () => (
                     <Edit title={<authorsTitle />}>
                       <SimpleForm>
-                          <TextInput source="authorName"   />
-<DateInput source="dateOfBirth"   />
-<TextInput source="sex"   />
-<TextInput source="countryOfBirth"   />
+                          <NumberInput source="name"   />
+<NumberInput source="gender"   />
+<NumberInput source="dateOfBirth"   />
+<NumberInput source="numberOfBooks"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -72,10 +72,10 @@ export const authorsEdit = () => (
 export const authorsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="authorName"   />
-<DateInput source="dateOfBirth"   />
-<TextInput source="sex"   />
-<TextInput source="countryOfBirth"   />
+                                        <NumberInput source="name"   />
+<NumberInput source="gender"   />
+<NumberInput source="dateOfBirth"   />
+<NumberInput source="numberOfBooks"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
