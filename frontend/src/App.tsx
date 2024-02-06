@@ -8,9 +8,9 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { booksList, booksCreate, booksEdit} from "./resources/books";
+import { bookList, bookCreate, bookEdit} from "./resources/book";
 import { authorsList, authorsCreate, authorsEdit} from "./resources/authors";
-import booksIcon from "@mui/icons-material/MenuBook";
+import bookIcon from "@mui/icons-material/MenuBook";
 import authorsIcon from "@mui/icons-material/Person"; 
 // SUPERTOKENS
 import React from "react";
@@ -73,17 +73,17 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="books" options={{label:"Books"}} 
-list={booksList}
-create={booksCreate}
-edit={booksEdit}
-recordRepresentation="bookTitle"
-icon={booksIcon}/>
+    <Resource name="book" options={{label:"Book"}} 
+list={bookList}
+create={bookCreate}
+edit={bookEdit}
+recordRepresentation="title"
+icon={bookIcon}/>
 <Resource name="authors" options={{label:"Authors"}} 
 list={authorsList}
 create={authorsCreate}
 edit={authorsEdit}
-recordRepresentation="authorName"
+recordRepresentation="name"
 icon={authorsIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
