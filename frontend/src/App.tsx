@@ -8,10 +8,16 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { bookList, bookCreate, bookEdit} from "./resources/book";
-import { authorsList, authorsCreate, authorsEdit} from "./resources/authors";
-import bookIcon from "@mui/icons-material/MenuBook";
-import authorsIcon from "@mui/icons-material/Person"; 
+import { UsersList, UsersCreate, UsersEdit} from "./resources/Users";
+import { CardsList, CardsCreate, CardsEdit} from "./resources/Cards";
+import { SetsList, SetsCreate, SetsEdit} from "./resources/Sets";
+import { InventoryList, InventoryCreate, InventoryEdit} from "./resources/Inventory";
+import { WishlistList, WishlistCreate, WishlistEdit} from "./resources/Wishlist";
+import UsersIcon from "@mui/icons-material/Person";
+import CardsIcon from "@mui/icons-material/Collections";
+import SetsIcon from "@mui/icons-material/Category";
+import InventoryIcon from "@mui/icons-material/Inventory2";
+import WishlistIcon from "@mui/icons-material/Favorite"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -73,18 +79,36 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="book" options={{label:"Book"}} 
-list={bookList}
-create={bookCreate}
-edit={bookEdit}
-recordRepresentation="title"
-icon={bookIcon}/>
-<Resource name="authors" options={{label:"Authors"}} 
-list={authorsList}
-create={authorsCreate}
-edit={authorsEdit}
-recordRepresentation="name"
-icon={authorsIcon}/>
+    <Resource name="Users" options={{label:"Users"}} 
+list={UsersList}
+create={UsersCreate}
+edit={UsersEdit}
+recordRepresentation="userId"
+icon={UsersIcon}/>
+<Resource name="Cards" options={{label:"Cards"}} 
+list={CardsList}
+create={CardsCreate}
+edit={CardsEdit}
+recordRepresentation="cardId"
+icon={CardsIcon}/>
+<Resource name="Sets" options={{label:"Sets"}} 
+list={SetsList}
+create={SetsCreate}
+edit={SetsEdit}
+recordRepresentation="setId"
+icon={SetsIcon}/>
+<Resource name="Inventory" options={{label:"Inventory"}} 
+list={InventoryList}
+create={InventoryCreate}
+edit={InventoryEdit}
+recordRepresentation="userId"
+icon={InventoryIcon}/>
+<Resource name="Wishlist" options={{label:"Wishlist"}} 
+list={WishlistList}
+create={WishlistCreate}
+edit={WishlistEdit}
+recordRepresentation="userId"
+icon={WishlistIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
