@@ -19,34 +19,19 @@ password: string;
 name: string;
 
 @Column({nullable: true})
-age: number;
-
-@Column({nullable: true})
-gender: string;
-
-@Column({nullable: true})
-weight: number;
-
-@Column({nullable: true})
-height: number;
-
-@Column({nullable: true})
-healthConditions: string;
-
-@Column({nullable: true})
-goals: string;
-
-@Column({nullable: true})
-dietaryPreferences: string;
-
-@Column({nullable: true})
 billingAddress: string;
+
+@Column({nullable: true})
+defaultShippingAddress: string;
 
 @Column({nullable: true})
 country: string;
 
 @Column({nullable: true})
 phone: string;
+
+@Column({nullable: true})
+cartId: string;
 
 
 }
