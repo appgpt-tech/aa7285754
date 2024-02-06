@@ -13,10 +13,10 @@ setId: string;
 setname: string;
 
 @Column({nullable: true})
-releasedate: date;
+releasedate: Date;
 
 @Column({nullable: true})
-totalcards: integer;
+totalcards: number;
 
 
 }
