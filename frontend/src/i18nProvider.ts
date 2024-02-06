@@ -4,8 +4,8 @@
     import enOriginal from 'ra-language-english';
 import frOriginal from 'ra-language-french';
 
-    const enResources = { resources: {"books":{"name":"Books","fields":{"bookTitle":"Book Title","releaseDate":"Release Date","numberOfBooksSold":"Number Of Books Sold","author":"Author","numberOfEditions":"Number Of Editions","id":"id"}},"authors":{"name":"Authors","fields":{"authorName":"Author Name","dateOfBirth":"Date Of Birth","sex":"Sex","countryOfBirth":"Country Of Birth","id":"id"}}}};
-const frResources = { resources: {"books":{"name":"Books (fr)","fields":{"bookTitle":"Book Title (fr)","releaseDate":"Release Date (fr)","numberOfBooksSold":"Number Of Books Sold (fr)","author":"Author (fr)","numberOfEditions":"Number Of Editions (fr)","id":"id"}},"authors":{"name":"Authors (fr)","fields":{"authorName":"Author Name (fr)","dateOfBirth":"Date Of Birth (fr)","sex":"Sex (fr)","countryOfBirth":"Country Of Birth (fr)","id":"id"}}}};
+    const enResources = { resources: {"book":{"name":"Book","fields":{"title":"Title","isbn":"Isbn","author":"Author","id":"id"}},"authors":{"name":"Authors","fields":{"name":"Name","gender":"Gender","dateOfBirth":"Date Of Birth","numberOfBooks":"Number Of Books","id":"id"}}}};
+const frResources = { resources: {"book":{"name":"Book (fr)","fields":{"title":"Title (fr)","isbn":"Isbn (fr)","author":"Author (fr)","id":"id"}},"authors":{"name":"Authors (fr)","fields":{"name":"Name (fr)","gender":"Gender (fr)","dateOfBirth":"Date Of Birth (fr)","numberOfBooks":"Number Of Books (fr)","id":"id"}}}};
 
 
     const en = mergeTranslations(enOriginal,enResources);
