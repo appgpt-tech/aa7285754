@@ -6,16 +6,16 @@ export class OrderDetailsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("integer",{nullable: true})
 orderId: number;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 productId: number;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 price: number;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 quantity: number;
 
 
