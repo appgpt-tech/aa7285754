@@ -6,13 +6,13 @@ export class tracksEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 trackName: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 album: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 lyrics: string;
 
 
