@@ -6,13 +6,13 @@ export class InventoryEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 productId: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 quantity: number;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 lowStockThreshold: number;
 
 
