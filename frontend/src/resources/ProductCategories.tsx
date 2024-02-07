@@ -49,8 +49,7 @@ export const ProductCategoriesList = () => (
         <DatagridConfigurable>
           <TextField source="categoryId" />
 <ReferenceField source="productId" reference="Products"  />
-<TextField source="description" />
-<NumberField source="id" /><EditButton />
+<TextField source="description" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -62,7 +61,6 @@ export const ProductCategoriesEdit = () => (
                           <TextInput source="categoryId"   />
 <ReferenceInput source="productId"  reference="Products"   />
 <TextInput source="description"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -73,7 +71,6 @@ export const ProductCategoriesCreate = () => (
                                         <TextInput source="categoryId"   />
 <ReferenceInput source="productId"  reference="Products"   />
 <TextInput source="description"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
