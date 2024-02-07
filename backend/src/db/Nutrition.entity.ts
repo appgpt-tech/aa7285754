@@ -6,25 +6,25 @@ export class NutritionEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 mealId: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 customerId: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 foodItem: string;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 quantity: number;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 calories: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 macronutrients: string;
 
-@Column({nullable: true})
+@Column("date",{nullable: true})
 date: Date;
 
 
