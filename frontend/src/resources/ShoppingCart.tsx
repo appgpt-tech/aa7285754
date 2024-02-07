@@ -51,8 +51,7 @@ export const ShoppingCartList = () => (
 <ReferenceField source="customerId" reference="Customers"  />
 <ReferenceField source="productId" reference="Products"  />
 <NumberField source="price" />
-<NumberField source="quantity" />
-<NumberField source="id" /><EditButton />
+<NumberField source="quantity" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -66,7 +65,6 @@ export const ShoppingCartEdit = () => (
 <ReferenceInput source="productId"  reference="Products"   />
 <NumberInput source="price"   />
 <NumberInput source="quantity"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -79,7 +77,6 @@ export const ShoppingCartCreate = () => (
 <ReferenceInput source="productId"  reference="Products"   />
 <NumberInput source="price"   />
 <NumberInput source="quantity"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
