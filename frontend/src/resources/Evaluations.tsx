@@ -94,7 +94,6 @@ export const EvaluationsCreate = () => (
 <TextInput source="feedbackFromSupervisor"   />
 <NumberInput source="overallRating"   />
 <TextInput source="recommendations"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
