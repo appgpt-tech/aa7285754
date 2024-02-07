@@ -53,8 +53,7 @@ export const ReviewsList = () => (
 <ReferenceField source="vendorId" reference="Vendors"  />
 <NumberField source="rating" />
 <TextField source="reviewDetails" />
-<DateField source="date" />
-<NumberField source="id" /><EditButton />
+<DateField source="date" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -70,7 +69,6 @@ export const ReviewsEdit = () => (
 <NumberInput source="rating"   />
 <TextInput source="reviewDetails"   />
 <DateInput source="date"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -85,7 +83,6 @@ export const ReviewsCreate = () => (
 <NumberInput source="rating"   />
 <TextInput source="reviewDetails"   />
 <DateInput source="date"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
