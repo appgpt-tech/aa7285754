@@ -8,12 +8,14 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { friendsList, friendsCreate, friendsEdit} from "./resources/friends";
+import { contactsList, contactsCreate, contactsEdit} from "./resources/contacts";
 import { websitesList, websitesCreate, websitesEdit} from "./resources/websites";
 import { credentialsList, credentialsCreate, credentialsEdit} from "./resources/credentials";
-import friendsIcon from "@mui/icons-material/People";
+import { moviesList, moviesCreate, moviesEdit} from "./resources/movies";
+import contactsIcon from "@mui/icons-material/Contacts";
 import websitesIcon from "@mui/icons-material/Language";
-import credentialsIcon from "@mui/icons-material/VpnKey"; 
+import credentialsIcon from "@mui/icons-material/VpnKey";
+import moviesIcon from "@mui/icons-material/Movie"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -75,17 +77,17 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="friends" options={{label:"Friends"}} 
-list={friendsList}
-create={friendsCreate}
-edit={friendsEdit}
+    <Resource name="contacts" options={{label:"Contacts"}} 
+list={contactsList}
+create={contactsCreate}
+edit={contactsEdit}
 recordRepresentation="name"
-icon={friendsIcon}/>
+icon={contactsIcon}/>
 <Resource name="websites" options={{label:"Websites"}} 
 list={websitesList}
 create={websitesCreate}
 edit={websitesEdit}
-recordRepresentation="siteName"
+recordRepresentation="websiteTitle"
 icon={websitesIcon}/>
 <Resource name="credentials" options={{label:"Credentials"}} 
 list={credentialsList}
@@ -93,6 +95,12 @@ create={credentialsCreate}
 edit={credentialsEdit}
 recordRepresentation="url"
 icon={credentialsIcon}/>
+<Resource name="movies" options={{label:"Movies"}} 
+list={moviesList}
+create={moviesCreate}
+edit={moviesEdit}
+recordRepresentation="movieTitle"
+icon={moviesIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
