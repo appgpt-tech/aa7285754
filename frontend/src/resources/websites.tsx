@@ -48,7 +48,7 @@ export const websitesList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
           <TextField source="siteName" />
-<TextField source="url" />
+<UrlField source="url" />
 <NumberField source="rating" /><EditButton />
 
         </DatagridConfigurable>
