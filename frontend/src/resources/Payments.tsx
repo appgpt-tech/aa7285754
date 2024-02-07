@@ -52,8 +52,7 @@ export const PaymentsList = () => (
 <NumberField source="amount" />
 <TextField source="paymentMethod" />
 <DateField source="paymentDate" />
-<TextField source="paymentStatus" />
-<NumberField source="id" /><EditButton />
+<TextField source="paymentStatus" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -68,7 +67,6 @@ export const PaymentsEdit = () => (
 <TextInput source="paymentMethod"   />
 <DateInput source="paymentDate"   />
 <TextInput source="paymentStatus"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -82,7 +80,6 @@ export const PaymentsCreate = () => (
 <TextInput source="paymentMethod"   />
 <DateInput source="paymentDate"   />
 <TextInput source="paymentStatus"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
