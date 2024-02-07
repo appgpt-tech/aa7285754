@@ -77,7 +77,7 @@ const App = () => (
 list={booksList}
 create={booksCreate}
 edit={booksEdit}
-recordRepresentation="isbn"
+recordRepresentation="title"
 icon={booksIcon}/>
 <Resource name="authors" options={{label:"Authors"}} 
 list={authorsList}
