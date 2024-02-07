@@ -49,8 +49,7 @@ export const InventoryList = () => (
         <DatagridConfigurable>
           <TextField source="productId" />
 <NumberField source="quantity" />
-<NumberField source="lowStockThreshold" />
-<NumberField source="id" /><EditButton />
+<NumberField source="lowStockThreshold" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -62,7 +61,6 @@ export const InventoryEdit = () => (
                           <TextInput source="productId"   />
 <NumberInput source="quantity"   />
 <NumberInput source="lowStockThreshold"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -73,7 +71,6 @@ export const InventoryCreate = () => (
                                         <TextInput source="productId"   />
 <NumberInput source="quantity"   />
 <NumberInput source="lowStockThreshold"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
