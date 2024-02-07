@@ -8,12 +8,16 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { artistsList, artistsCreate, artistsEdit} from "./resources/artists";
-import { albumsList, albumsCreate, albumsEdit} from "./resources/albums";
-import { tracksList, tracksCreate, tracksEdit} from "./resources/tracks";
-import artistsIcon from "@mui/icons-material/Person";
-import albumsIcon from "@mui/icons-material/Album";
-import tracksIcon from "@mui/icons-material/MusicNote"; 
+import { UsersList, UsersCreate, UsersEdit} from "./resources/Users";
+import { EmployeesList, EmployeesCreate, EmployeesEdit} from "./resources/Employees";
+import { EvaluationsList, EvaluationsCreate, EvaluationsEdit} from "./resources/Evaluations";
+import { PayrollList, PayrollCreate, PayrollEdit} from "./resources/Payroll";
+import { LeaveRequestsList, LeaveRequestsCreate, LeaveRequestsEdit} from "./resources/LeaveRequests";
+import UsersIcon from "@mui/icons-material/Person";
+import EmployeesIcon from "@mui/icons-material/Work";
+import EvaluationsIcon from "@mui/icons-material/Assessment";
+import PayrollIcon from "@mui/icons-material/Payments";
+import LeaveRequestsIcon from "@mui/icons-material/BeachAccess"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -75,24 +79,36 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="artists" options={{label:"Artists"}} 
-list={artistsList}
-create={artistsCreate}
-edit={artistsEdit}
-recordRepresentation="artistName"
-icon={artistsIcon}/>
-<Resource name="albums" options={{label:"Albums"}} 
-list={albumsList}
-create={albumsCreate}
-edit={albumsEdit}
-recordRepresentation="albumName"
-icon={albumsIcon}/>
-<Resource name="tracks" options={{label:"Tracks"}} 
-list={tracksList}
-create={tracksCreate}
-edit={tracksEdit}
-recordRepresentation="trackName"
-icon={tracksIcon}/>
+    <Resource name="Users" options={{label:"Users"}} 
+list={UsersList}
+create={UsersCreate}
+edit={UsersEdit}
+recordRepresentation="userId"
+icon={UsersIcon}/>
+<Resource name="Employees" options={{label:"Employees"}} 
+list={EmployeesList}
+create={EmployeesCreate}
+edit={EmployeesEdit}
+recordRepresentation="employeeId"
+icon={EmployeesIcon}/>
+<Resource name="Evaluations" options={{label:"Evaluations"}} 
+list={EvaluationsList}
+create={EvaluationsCreate}
+edit={EvaluationsEdit}
+recordRepresentation="reviewId"
+icon={EvaluationsIcon}/>
+<Resource name="Payroll" options={{label:"Payroll"}} 
+list={PayrollList}
+create={PayrollCreate}
+edit={PayrollEdit}
+recordRepresentation="payrollId"
+icon={PayrollIcon}/>
+<Resource name="LeaveRequests" options={{label:"Leave Requests"}} 
+list={LeaveRequestsList}
+create={LeaveRequestsCreate}
+edit={LeaveRequestsEdit}
+recordRepresentation="requestId"
+icon={LeaveRequestsIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
