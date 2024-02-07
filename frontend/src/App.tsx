@@ -8,20 +8,8 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { UsersList, UsersCreate, UsersEdit} from "./resources/Users";
-import { CustomersList, CustomersCreate, CustomersEdit} from "./resources/Customers";
-import { WorkoutsList, WorkoutsCreate, WorkoutsEdit} from "./resources/Workouts";
-import { NutritionList, NutritionCreate, NutritionEdit} from "./resources/Nutrition";
-import { HealthMetricsList, HealthMetricsCreate, HealthMetricsEdit} from "./resources/HealthMetrics";
-import { NotificationsList, NotificationsCreate, NotificationsEdit} from "./resources/Notifications";
-import { SupportTicketsList, SupportTicketsCreate, SupportTicketsEdit} from "./resources/SupportTickets";
-import UsersIcon from "@mui/icons-material/Person";
-import CustomersIcon from "@mui/icons-material/Group";
-import WorkoutsIcon from "@mui/icons-material/FitnessCenter";
-import NutritionIcon from "@mui/icons-material/Restaurant";
-import HealthMetricsIcon from "@mui/icons-material/Favorite";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import SupportTicketsIcon from "@mui/icons-material/SupportAgent"; 
+
+ 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -83,48 +71,7 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="Users" options={{label:"Users"}} 
-list={UsersList}
-create={UsersCreate}
-edit={UsersEdit}
-recordRepresentation="userId"
-icon={UsersIcon}/>
-<Resource name="Customers" options={{label:"Customers"}} 
-list={CustomersList}
-create={CustomersCreate}
-edit={CustomersEdit}
-recordRepresentation="customerId"
-icon={CustomersIcon}/>
-<Resource name="Workouts" options={{label:"Workouts"}} 
-list={WorkoutsList}
-create={WorkoutsCreate}
-edit={WorkoutsEdit}
-recordRepresentation="workoutId"
-icon={WorkoutsIcon}/>
-<Resource name="Nutrition" options={{label:"Nutrition"}} 
-list={NutritionList}
-create={NutritionCreate}
-edit={NutritionEdit}
-recordRepresentation="mealId"
-icon={NutritionIcon}/>
-<Resource name="HealthMetrics" options={{label:"Health Metrics"}} 
-list={HealthMetricsList}
-create={HealthMetricsCreate}
-edit={HealthMetricsEdit}
-recordRepresentation="metricId"
-icon={HealthMetricsIcon}/>
-<Resource name="Notifications" options={{label:"Notifications"}} 
-list={NotificationsList}
-create={NotificationsCreate}
-edit={NotificationsEdit}
-recordRepresentation="notificationId"
-icon={NotificationsIcon}/>
-<Resource name="SupportTickets" options={{label:"Support Tickets"}} 
-list={SupportTicketsList}
-create={SupportTicketsCreate}
-edit={SupportTicketsEdit}
-recordRepresentation="ticketId"
-icon={SupportTicketsIcon}/>
+    
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
