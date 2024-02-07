@@ -73,7 +73,6 @@ export const artistsCreate = () => (
                                         <TextInput source="artistName"   />
 <TextInput source="band"   />
 <DateInput source="dateOfBirth"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
