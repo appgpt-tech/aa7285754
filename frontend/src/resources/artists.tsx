@@ -49,8 +49,7 @@ export const artistsList = () => (
         <DatagridConfigurable>
           <TextField source="artistName" />
 <TextField source="band" />
-<DateField source="dateOfBirth" />
-<NumberField source="id" /><EditButton />
+<DateField source="dateOfBirth" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -62,7 +61,6 @@ export const artistsEdit = () => (
                           <TextInput source="artistName"   />
 <TextInput source="band"   />
 <DateInput source="dateOfBirth"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
