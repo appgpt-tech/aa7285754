@@ -4,8 +4,8 @@
     import enOriginal from 'ra-language-english';
 import frOriginal from 'ra-language-french';
 
-    const enResources = { resources: {"books":{"name":"Books","fields":{"title":"Title","isbn":"Isbn","author":"Author","id":"id"}},"authors":{"name":"Authors","fields":{"authorName":"Author Name","gender":"Gender","dateOfBirth":"Date Of Birth","numberOfBooks":"Number Of Books","id":"id"}}}};
-const frResources = { resources: {"books":{"name":"Books (fr)","fields":{"title":"Title (fr)","isbn":"Isbn (fr)","author":"Author (fr)","id":"id"}},"authors":{"name":"Authors (fr)","fields":{"authorName":"Author Name (fr)","gender":"Gender (fr)","dateOfBirth":"Date Of Birth (fr)","numberOfBooks":"Number Of Books (fr)","id":"id"}}}};
+    const enResources = { resources: {"artists":{"name":"Artists","fields":{"artistName":"Artist Name","band":"Band","dateOfBirth":"Date Of Birth","id":"id"}},"albums":{"name":"Albums","fields":{"albumName":"Album Name","artistName":"Artist Name","copiesSold":"Copies Sold","launchDate":"Launch Date","id":"id"}},"tracks":{"name":"Tracks","fields":{"trackName":"Track Name","album":"Album","lyrics":"Lyrics","id":"id"}}}};
+const frResources = { resources: {"artists":{"name":"Artists (fr)","fields":{"artistName":"Artist Name (fr)","band":"Band (fr)","dateOfBirth":"Date Of Birth (fr)","id":"id"}},"albums":{"name":"Albums (fr)","fields":{"albumName":"Album Name (fr)","artistName":"Artist Name (fr)","copiesSold":"Copies Sold (fr)","launchDate":"Launch Date (fr)","id":"id"}},"tracks":{"name":"Tracks (fr)","fields":{"trackName":"Track Name (fr)","album":"Album (fr)","lyrics":"Lyrics (fr)","id":"id"}}}};
 
 
     const en = mergeTranslations(enOriginal,enResources);
