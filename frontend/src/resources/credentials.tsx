@@ -47,9 +47,9 @@ const credentialsTitle = () => {
 export const credentialsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="url" />
+          <UrlField source="url" />
 <TextField source="username" />
-<TextField source="password" /><EditButton />
+<PasswordInput source="password" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -60,7 +60,7 @@ export const credentialsEdit = () => (
                       <SimpleForm>
                           <TextInput source="url"   />
 <TextInput source="username"   />
-<TextInput source="password"   />
+<PasswordInput source="password"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -70,7 +70,7 @@ export const credentialsCreate = () => (
                                     <SimpleForm>
                                         <TextInput source="url"   />
 <TextInput source="username"   />
-<TextInput source="password"   />
+<PasswordInput source="password"   />
                                     </SimpleForm>
                                   </Create>
                                 );
