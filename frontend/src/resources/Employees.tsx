@@ -133,7 +133,6 @@ export const EmployeesCreate = () => (
 <DateInput source="endDate"   />
 <NumberInput source="salaryInformation"   />
 <TextInput source="profilePicture"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
