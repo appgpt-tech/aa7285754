@@ -53,8 +53,7 @@ export const SupportTicketsList = () => (
 <TextField source="description" />
 <TextField source="status" />
 <DateField source="creationDate" />
-<DateField source="resolutionDate" />
-<NumberField source="id" /><EditButton />
+<DateField source="resolutionDate" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -70,7 +69,6 @@ export const SupportTicketsEdit = () => (
 <TextInput source="status"   />
 <DateInput source="creationDate"   />
 <DateInput source="resolutionDate"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -85,7 +83,6 @@ export const SupportTicketsCreate = () => (
 <TextInput source="status"   />
 <DateInput source="creationDate"   />
 <DateInput source="resolutionDate"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
