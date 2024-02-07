@@ -6,8 +6,8 @@ export class credentialsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("integer",{nullable: true})
-url: number;
+  @Column("text",{nullable: true})
+url: string;
 
 @Column("text",{nullable: true})
 username: string;
