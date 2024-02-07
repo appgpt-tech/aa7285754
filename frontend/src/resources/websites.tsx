@@ -33,6 +33,7 @@ import {
 } from "react-admin";
 import { useRecordContext } from "react-admin";
 const ReadOnlyPasswordField = ({ record, source }) => {
+  if(!record) return '';
   const password = record[source]; // Assuming 'source' is the key for the password in your data
 
   // You can customize the way you display the password here, e.g., mask it with asterisks
