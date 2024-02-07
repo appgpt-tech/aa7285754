@@ -88,7 +88,6 @@ export const LeaveRequestsCreate = () => (
 <TextInput source="reason"   />
 <TextInput source="approvalStatus"   />
 <ReferenceInput source="approverUserId"  reference="Users"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
