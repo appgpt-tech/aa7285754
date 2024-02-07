@@ -49,8 +49,7 @@ export const tracksList = () => (
         <DatagridConfigurable>
           <TextField source="trackName" />
 <ReferenceField source="album" reference="albums"  />
-<TextField source="lyrics" />
-<NumberField source="id" /><EditButton />
+<TextField source="lyrics" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -62,7 +61,6 @@ export const tracksEdit = () => (
                           <TextInput source="trackName"   />
 <ReferenceInput source="album"  reference="albums"   />
 <TextInput source="lyrics"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
