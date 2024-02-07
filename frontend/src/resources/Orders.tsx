@@ -58,8 +58,7 @@ export const OrdersList = () => (
 <TextField source="orderEmail" />
 <DateField source="orderDate" />
 <TextField source="orderStatus" />
-<TextField source="trackingNo" />
-<NumberField source="id" /><EditButton />
+<TextField source="trackingNo" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -80,7 +79,6 @@ export const OrdersEdit = () => (
 <DateInput source="orderDate"   />
 <TextInput source="orderStatus"   />
 <TextInput source="trackingNo"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -100,7 +98,6 @@ export const OrdersCreate = () => (
 <DateInput source="orderDate"   />
 <TextInput source="orderStatus"   />
 <TextInput source="trackingNo"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
