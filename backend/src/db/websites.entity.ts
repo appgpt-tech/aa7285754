@@ -7,13 +7,10 @@ export class websitesEntity {
   id: number;
 
   @Column("text",{nullable: true})
-websiteTitle: string;
+siteName: string;
 
 @Column("text",{nullable: true})
 url: string;
-
-@Column("text",{nullable: true})
-category: string;
 
 @Column("integer",{nullable: true})
 rating: number;
