@@ -6,19 +6,19 @@ export class VendorsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 vendorId: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 companyName: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 contactName: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 email: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 password: string;
 
 
