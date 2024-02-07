@@ -53,8 +53,7 @@ export const WorkoutsList = () => (
 <NumberField source="duration" />
 <TextField source="intensity" />
 <NumberField source="caloriesBurned" />
-<DateField source="date" />
-<NumberField source="id" /><EditButton />
+<DateField source="date" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -70,7 +69,6 @@ export const WorkoutsEdit = () => (
 <TextInput source="intensity"   />
 <NumberInput source="caloriesBurned"   />
 <DateInput source="date"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -85,7 +83,6 @@ export const WorkoutsCreate = () => (
 <TextInput source="intensity"   />
 <NumberInput source="caloriesBurned"   />
 <DateInput source="date"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
