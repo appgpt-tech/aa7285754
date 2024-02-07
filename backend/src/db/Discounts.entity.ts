@@ -6,19 +6,19 @@ export class DiscountsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("integer",{nullable: true})
 productId: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 discountName: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 description: string;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 discountAmount: number;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 discountPercent: number;
 
 
