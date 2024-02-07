@@ -7,7 +7,7 @@ export class authorsEntity {
   id: number;
 
   @Column({nullable: true})
-name: string;
+authorName: string;
 
 @Column({nullable: true})
 gender: string;
