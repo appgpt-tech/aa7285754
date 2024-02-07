@@ -51,8 +51,7 @@ export const UsersList = () => (
 <TextField source="name" />
 <TextField source="email" />
 <TextField source="password" />
-<TextField source="role" />
-<NumberField source="id" /><EditButton />
+<TextField source="role" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -66,7 +65,6 @@ export const UsersEdit = () => (
 <TextInput source="email"   />
 <TextInput source="password"   />
 <TextInput source="role"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
