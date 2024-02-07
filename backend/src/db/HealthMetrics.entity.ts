@@ -6,22 +6,22 @@ export class HealthMetricsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 metricId: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 customerId: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 type: string;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 value: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 unit: string;
 
-@Column({nullable: true})
+@Column("date",{nullable: true})
 date: Date;
 
 
