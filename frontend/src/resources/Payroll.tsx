@@ -94,7 +94,6 @@ export const PayrollCreate = () => (
 <DateInput source="payDate"   />
 <NumberInput source="overtimeHours"   />
 <NumberInput source="overtimePay"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
