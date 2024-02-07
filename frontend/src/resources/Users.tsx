@@ -79,7 +79,6 @@ export const UsersCreate = () => (
 <TextInput source="email"   />
 <TextInput source="password"   />
 <TextInput source="role"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
