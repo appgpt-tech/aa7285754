@@ -6,19 +6,19 @@ export class ShoppingCartEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 cartId: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 customerId: number;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 productId: number;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 price: number;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 quantity: number;
 
 
