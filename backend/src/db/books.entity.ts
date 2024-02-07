@@ -12,5 +12,8 @@ title: string;
 @Column({nullable: true})
 isbn: string;
 
+@Column({nullable: true})
+author: number;
+
 
 }
