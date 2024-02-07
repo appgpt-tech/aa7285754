@@ -53,8 +53,7 @@ export const NutritionList = () => (
 <NumberField source="quantity" />
 <NumberField source="calories" />
 <TextField source="macronutrients" />
-<DateField source="date" />
-<NumberField source="id" /><EditButton />
+<DateField source="date" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -70,7 +69,6 @@ export const NutritionEdit = () => (
 <NumberInput source="calories"   />
 <TextInput source="macronutrients"   />
 <DateInput source="date"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -85,7 +83,6 @@ export const NutritionCreate = () => (
 <NumberInput source="calories"   />
 <TextInput source="macronutrients"   />
 <DateInput source="date"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
