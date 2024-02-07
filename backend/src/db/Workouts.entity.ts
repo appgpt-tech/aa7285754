@@ -15,7 +15,7 @@ customerId: number;
 @Column("text",{nullable: true})
 type: string;
 
-@Column("integer",{nullable: true})
+@Column("real",{nullable: true})
 duration: number;
 
 @Column("text",{nullable: true})
