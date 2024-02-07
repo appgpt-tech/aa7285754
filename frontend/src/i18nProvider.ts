@@ -4,8 +4,8 @@
     import enOriginal from 'ra-language-english';
 import frOriginal from 'ra-language-french';
 
-    const enResources = { resources: {"friends":{"name":"Friends","fields":{"name":"Name","birthday":"Birthday","starSign":"Star Sign","gender":"Gender","email":"Email","id":"id"}},"websites":{"name":"Websites","fields":{"siteName":"Site Name","url":"URL","rating":"Rating","id":"id"}},"credentials":{"name":"Credentials","fields":{"url":"URL","username":"Username","password":"Password","id":"id"}}}};
-const frResources = { resources: {"friends":{"name":"Amis","fields":{"name":"Nom","birthday":"Anniversaire","starSign":"Signe Astrologique","gender":"Genre","email":"Courriel","id":"id"}},"websites":{"name":"Sites Web","fields":{"siteName":"Nom du Site","url":"URL","rating":"Évaluation","id":"id"}},"credentials":{"name":"Identifiants","fields":{"url":"URL","username":"Nom d'utilisateur","password":"Mot de passe","id":"id"}}}};
+    const enResources = { resources: {"friends":{"name":"Friends","fields":{"name":"Name","birthday":"Birthday","starSign":"Star Sign","gender":"Gender","email":"Email","id":"id"}},"websites":{"name":"Websites","fields":{"siteName":"Site Name","url":"Url","rating":"Rating","id":"id"}},"credentials":{"name":"Credentials","fields":{"url":"Url","username":"Username","password":"Password","id":"id"}}}};
+const frResources = { resources: {"friends":{"name":"Friends (fr)","fields":{"name":"Name (fr)","birthday":"Birthday (fr)","starSign":"Star Sign (fr)","gender":"Gender (fr)","email":"Email (fr)","id":"id"}},"websites":{"name":"Websites (fr)","fields":{"siteName":"Site Name (fr)","url":"Url (fr)","rating":"Rating (fr)","id":"id"}},"credentials":{"name":"Credentials (fr)","fields":{"url":"Url (fr)","username":"Username (fr)","password":"Password (fr)","id":"id"}}}};
 
 
     const en = mergeTranslations(enOriginal,enResources);
