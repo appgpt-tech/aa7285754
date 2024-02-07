@@ -6,32 +6,47 @@ export class CustomersEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 customerId: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 email: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 password: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 name: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
+age: number;
+
+@Column("text",{nullable: true})
+gender: string;
+
+@Column("real",{nullable: true})
+weight: number;
+
+@Column("real",{nullable: true})
+height: number;
+
+@Column("text",{nullable: true})
+healthConditions: string;
+
+@Column("text",{nullable: true})
+goals: string;
+
+@Column("text",{nullable: true})
+dietaryPreferences: string;
+
+@Column("text",{nullable: true})
 billingAddress: string;
 
-@Column({nullable: true})
-defaultShippingAddress: string;
-
-@Column({nullable: true})
+@Column("text",{nullable: true})
 country: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 phone: string;
-
-@Column({nullable: true})
-cartId: string;
 
 
 }
