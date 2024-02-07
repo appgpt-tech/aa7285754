@@ -6,40 +6,40 @@ export class OrdersEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 orderId: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 customerId: number;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 totalAmount: number;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 vat: number;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 productTotalAmount: number;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 shippingCost: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 shippingAddress: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 orderAddress: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 orderEmail: string;
 
-@Column({nullable: true})
+@Column("date",{nullable: true})
 orderDate: Date;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 orderStatus: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 trackingNo: string;
 
 
