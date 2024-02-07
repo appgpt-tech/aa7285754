@@ -6,16 +6,16 @@ export class albumsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 albumName: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 artistName: number;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 copiesSold: number;
 
-@Column({nullable: true})
+@Column("date",{nullable: true})
 launchDate: Date;
 
 
