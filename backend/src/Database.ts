@@ -3,9 +3,10 @@ import { DataSource } from "typeorm";
 import { DBConfiguration } from "./Configuration";
 import { SettingsEntity } from "./db/Settings.entity";
 //autogenerate imports based on resources
-import { friendsEntity } from "./db/friends.entity";
+import { contactsEntity } from "./db/contacts.entity";
 import { websitesEntity } from "./db/websites.entity";
 import { credentialsEntity } from "./db/credentials.entity";
+import { moviesEntity } from "./db/movies.entity";
 
 export class Database {
   static dbConfiguration: DBConfiguration;
@@ -16,7 +17,7 @@ export class Database {
     let dbConfig: any = dbConfiguration as any;
     //Autogenerate entities array from resource names
 
-    dbConfig.entities = [SettingsEntity, friendsEntity, websitesEntity, credentialsEntity];
+    dbConfig.entities = [SettingsEntity, contactsEntity, websitesEntity, credentialsEntity, moviesEntity];
     Database.ds = new DataSource(dbConfig);
     await Database.ds.initialize();
 
@@ -26,16 +27,17 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"friends":[{"name":"name 1","birthday":"2024-02-11T22:19:25.061Z","starSign":"starSign 1","gender":"gender 1","email":"email 1","id":36},{"name":"name 2","birthday":"2023-08-29T20:48:13.176Z","starSign":"starSign 2","gender":"gender 2","email":"email 2","id":81},{"name":"name 3","birthday":"2024-11-09T06:50:07.205Z","starSign":"starSign 3","gender":"gender 3","email":"email 3","id":27},{"name":"name 4","birthday":"2024-06-21T07:49:07.722Z","starSign":"starSign 4","gender":"gender 4","email":"email 4","id":25},{"name":"name 5","birthday":"2023-10-28T01:29:44.518Z","starSign":"starSign 5","gender":"gender 5","email":"email 5","id":41}],"websites":[{"siteName":"siteName 1","url":"url 1","rating":1,"id":59},{"siteName":"siteName 2","url":"url 2","rating":2,"id":17},{"siteName":"siteName 3","url":"url 3","rating":3,"id":42},{"siteName":"siteName 4","url":"url 4","rating":4,"id":19},{"siteName":"siteName 5","url":"url 5","rating":5,"id":48}],"credentials":[{"url":"url 1","username":"username 1","password":"password 1","id":38},{"url":"url 2","username":"username 2","password":"password 2","id":70},{"url":"url 3","username":"username 3","password":"password 3","id":68},{"url":"url 4","username":"username 4","password":"password 4","id":96},{"url":"url 5","username":"username 5","password":"password 5","id":43}]};
+    let data: any = {"contacts":[{"name":"name 1","email":"email 1","mobileNumber":"mobileNumber 1","linkedinUrl":"linkedinUrl 1","id":37},{"name":"name 2","email":"email 2","mobileNumber":"mobileNumber 2","linkedinUrl":"linkedinUrl 2","id":74},{"name":"name 3","email":"email 3","mobileNumber":"mobileNumber 3","linkedinUrl":"linkedinUrl 3","id":66},{"name":"name 4","email":"email 4","mobileNumber":"mobileNumber 4","linkedinUrl":"linkedinUrl 4","id":6},{"name":"name 5","email":"email 5","mobileNumber":"mobileNumber 5","linkedinUrl":"linkedinUrl 5","id":49}],"websites":[{"websiteTitle":"websiteTitle 1","url":"url 1","category":"category 1","rating":1,"id":55},{"websiteTitle":"websiteTitle 2","url":"url 2","category":"category 2","rating":2,"id":73},{"websiteTitle":"websiteTitle 3","url":"url 3","category":"category 3","rating":3,"id":43},{"websiteTitle":"websiteTitle 4","url":"url 4","category":"category 4","rating":4,"id":14},{"websiteTitle":"websiteTitle 5","url":"url 5","category":"category 5","rating":5,"id":84}],"credentials":[{"url":"url 1","username":"username 1","password":"password 1","id":91},{"url":"url 2","username":"username 2","password":"password 2","id":41},{"url":"url 3","username":"username 3","password":"password 3","id":10},{"url":"url 4","username":"username 4","password":"password 4","id":20},{"url":"url 5","username":"username 5","password":"password 5","id":84}],"movies":[{"movieTitle":"movieTitle 1","genre":"genre 1","watchedStatus":false,"id":28},{"movieTitle":"movieTitle 2","genre":"genre 2","watchedStatus":true,"id":6},{"movieTitle":"movieTitle 3","genre":"genre 3","watchedStatus":false,"id":23},{"movieTitle":"movieTitle 4","genre":"genre 4","watchedStatus":false,"id":95},{"movieTitle":"movieTitle 5","genre":"genre 5","watchedStatus":false,"id":20}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
     //forcing app recreation
     if (true){
       console.log('   Seeding database...');
-      await this.SeedResource("friendsEntity", data.friends);
+      await this.SeedResource("contactsEntity", data.contacts);
 await this.SeedResource("websitesEntity", data.websites);
-await this.SeedResource("credentialsEntity", data.credentials); 
+await this.SeedResource("credentialsEntity", data.credentials);
+await this.SeedResource("moviesEntity", data.movies); 
       await this.SeedResource("SettingsEntity", {
         settingname: "isSeeded",
         settingvalue: "true",
