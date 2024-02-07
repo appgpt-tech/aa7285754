@@ -18,5 +18,8 @@ starSign: string;
 @Column("text",{nullable: true})
 gender: string;
 
+@Column("text",{nullable: true})
+email: string;
+
 
 }
