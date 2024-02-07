@@ -6,22 +6,22 @@ export class NotificationsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 notificationId: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 customerId: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 type: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 message: string;
 
-@Column({nullable: true})
+@Column("date",{nullable: true})
 dateScheduled: Date;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 status: string;
 
 
