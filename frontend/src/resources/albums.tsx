@@ -76,7 +76,6 @@ export const albumsCreate = () => (
 <ReferenceInput source="artistName"  reference="artists"   />
 <NumberInput source="copiesSold"   />
 <DateInput source="launchDate"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
