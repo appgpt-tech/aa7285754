@@ -52,8 +52,7 @@ export const NotificationsList = () => (
 <TextField source="type" />
 <TextField source="message" />
 <DateField source="dateScheduled" />
-<TextField source="status" />
-<NumberField source="id" /><EditButton />
+<TextField source="status" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -68,7 +67,6 @@ export const NotificationsEdit = () => (
 <TextInput source="message"   />
 <DateInput source="dateScheduled"   />
 <TextInput source="status"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -82,7 +80,6 @@ export const NotificationsCreate = () => (
 <TextInput source="message"   />
 <DateInput source="dateScheduled"   />
 <TextInput source="status"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
