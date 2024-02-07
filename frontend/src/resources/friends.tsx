@@ -51,7 +51,8 @@ export const friendsList = () => (
           <TextField source="name" />
 <DateField source="birthday" />
 <TextField source="starSign" />
-<TextField source="gender" /><EditButton />
+<TextField source="gender" />
+<EmailField source="email" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -64,6 +65,7 @@ export const friendsEdit = () => (
 <DateInput source="birthday"   />
 <TextInput source="starSign"   />
 <TextInput source="gender"   />
+<TextInput source="email"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -75,12 +77,14 @@ export const friendsCreate = () => (
 <DateInput source="birthday"   />
 <TextInput source="starSign"   />
 <TextInput source="gender"   />
+<TextInput source="email"   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
+,
 ,
 ,
 ,
