@@ -50,8 +50,7 @@ export const albumsList = () => (
           <TextField source="albumName" />
 <ReferenceField source="artistName" reference="artists"  />
 <NumberField source="copiesSold" />
-<DateField source="launchDate" />
-<NumberField source="id" /><EditButton />
+<DateField source="launchDate" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -64,7 +63,6 @@ export const albumsEdit = () => (
 <ReferenceInput source="artistName"  reference="artists"   />
 <NumberInput source="copiesSold"   />
 <DateInput source="launchDate"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
