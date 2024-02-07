@@ -50,8 +50,7 @@ export const OrderDetailsList = () => (
           <ReferenceField source="orderId" reference="Orders"  />
 <ReferenceField source="productId" reference="Products"  />
 <NumberField source="price" />
-<NumberField source="quantity" />
-<NumberField source="id" /><EditButton />
+<NumberField source="quantity" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -64,7 +63,6 @@ export const OrderDetailsEdit = () => (
 <ReferenceInput source="productId"  reference="Products"   />
 <NumberInput source="price"   />
 <NumberInput source="quantity"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -76,7 +74,6 @@ export const OrderDetailsCreate = () => (
 <ReferenceInput source="productId"  reference="Products"   />
 <NumberInput source="price"   />
 <NumberInput source="quantity"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
