@@ -73,7 +73,6 @@ export const tracksCreate = () => (
                                         <TextInput source="trackName"   />
 <ReferenceInput source="album"  reference="albums"   />
 <TextInput source="lyrics"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
