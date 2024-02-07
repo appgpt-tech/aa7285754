@@ -50,7 +50,7 @@ export const credentialsList = () => (
         <DatagridConfigurable>
           <UrlField source="url" />
 <TextField source="username" />
-<PasswordInput source="password" /><EditButton />
+<TextField source="password" /><EditButton />
 
         </DatagridConfigurable>
       </List>
