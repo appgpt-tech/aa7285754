@@ -8,10 +8,12 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { booksList, booksCreate, booksEdit} from "./resources/books";
-import { authorsList, authorsCreate, authorsEdit} from "./resources/authors";
-import booksIcon from "@mui/icons-material/MenuBook";
-import authorsIcon from "@mui/icons-material/Person"; 
+import { artistsList, artistsCreate, artistsEdit} from "./resources/artists";
+import { albumsList, albumsCreate, albumsEdit} from "./resources/albums";
+import { tracksList, tracksCreate, tracksEdit} from "./resources/tracks";
+import artistsIcon from "@mui/icons-material/Person";
+import albumsIcon from "@mui/icons-material/Album";
+import tracksIcon from "@mui/icons-material/MusicNote"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -73,18 +75,24 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="books" options={{label:"Books"}} 
-list={booksList}
-create={booksCreate}
-edit={booksEdit}
-recordRepresentation="title"
-icon={booksIcon}/>
-<Resource name="authors" options={{label:"Authors"}} 
-list={authorsList}
-create={authorsCreate}
-edit={authorsEdit}
-recordRepresentation="authorName"
-icon={authorsIcon}/>
+    <Resource name="artists" options={{label:"Artists"}} 
+list={artistsList}
+create={artistsCreate}
+edit={artistsEdit}
+recordRepresentation="artistName"
+icon={artistsIcon}/>
+<Resource name="albums" options={{label:"Albums"}} 
+list={albumsList}
+create={albumsCreate}
+edit={albumsEdit}
+recordRepresentation="albumName"
+icon={albumsIcon}/>
+<Resource name="tracks" options={{label:"Tracks"}} 
+list={tracksList}
+create={tracksCreate}
+edit={tracksEdit}
+recordRepresentation="trackName"
+icon={tracksIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
