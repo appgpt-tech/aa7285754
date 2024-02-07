@@ -6,25 +6,25 @@ export class ReviewsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 reviewId: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 productId: number;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 customerId: number;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 vendorId: number;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 rating: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 reviewDetails: string;
 
-@Column({nullable: true})
+@Column("date",{nullable: true})
 date: Date;
 
 
