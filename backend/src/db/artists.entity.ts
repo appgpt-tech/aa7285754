@@ -6,13 +6,13 @@ export class artistsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 artistName: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 band: string;
 
-@Column({nullable: true})
+@Column("date",{nullable: true})
 dateOfBirth: Date;
 
 
