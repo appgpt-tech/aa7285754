@@ -51,8 +51,7 @@ export const VendorsList = () => (
 <TextField source="companyName" />
 <TextField source="contactName" />
 <TextField source="email" />
-<TextField source="password" />
-<NumberField source="id" /><EditButton />
+<TextField source="password" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -66,7 +65,6 @@ export const VendorsEdit = () => (
 <TextInput source="contactName"   />
 <TextInput source="email"   />
 <TextInput source="password"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -79,7 +77,6 @@ export const VendorsCreate = () => (
 <TextInput source="contactName"   />
 <TextInput source="email"   />
 <TextInput source="password"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
