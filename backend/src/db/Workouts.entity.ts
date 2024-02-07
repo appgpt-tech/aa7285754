@@ -6,25 +6,25 @@ export class WorkoutsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 workoutId: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 customerId: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 type: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 duration: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 intensity: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 caloriesBurned: number;
 
-@Column({nullable: true})
+@Column("date",{nullable: true})
 date: Date;
 
 
