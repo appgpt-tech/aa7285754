@@ -6,22 +6,22 @@ export class PaymentsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 paymentId: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 orderId: number;
 
-@Column({nullable: true})
+@Column("real",{nullable: true})
 amount: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 paymentMethod: string;
 
-@Column({nullable: true})
+@Column("date",{nullable: true})
 paymentDate: Date;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 paymentStatus: string;
 
 
