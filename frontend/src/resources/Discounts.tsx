@@ -51,8 +51,7 @@ export const DiscountsList = () => (
 <TextField source="discountName" />
 <TextField source="description" />
 <NumberField source="discountAmount" />
-<NumberField source="discountPercent" />
-<NumberField source="id" /><EditButton />
+<NumberField source="discountPercent" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -66,7 +65,6 @@ export const DiscountsEdit = () => (
 <TextInput source="description"   />
 <NumberInput source="discountAmount"   />
 <NumberInput source="discountPercent"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -79,7 +77,6 @@ export const DiscountsCreate = () => (
 <TextInput source="description"   />
 <NumberInput source="discountAmount"   />
 <NumberInput source="discountPercent"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
