@@ -41,17 +41,14 @@ const ListActions = () => (
 );
 const booksTitle = () => {
   const record = useRecordContext();
-  return <span>books {record ? `"${ record.bookTitle }"` : ""}</span>;
+  return <span>books {record ? `"${ record.title }"` : ""}</span>;
 };
 
 export const booksList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="bookTitle" />
-<DateField source="releaseDate" />
-<NumberField source="numberOfBooksSold" />
-<ReferenceField source="author" reference="authors"  />
-<NumberField source="numberOfEditions" />
+          <TextField source="title" />
+<TextField source="isbn" />
 <NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
@@ -61,11 +58,8 @@ export const booksList = () => (
 export const booksEdit = () => (
                     <Edit title={<booksTitle />}>
                       <SimpleForm>
-                          <TextInput source="bookTitle"   />
-<DateInput source="releaseDate"   />
-<NumberInput source="numberOfBooksSold"   />
-<ReferenceInput source="author"  reference="authors"   />
-<NumberInput source="numberOfEditions"   />
+                          <TextInput source="title"   />
+<TextInput source="isbn"   />
 <NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -74,11 +68,8 @@ export const booksEdit = () => (
 export const booksCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="bookTitle"   />
-<DateInput source="releaseDate"   />
-<NumberInput source="numberOfBooksSold"   />
-<ReferenceInput source="author"  reference="authors"   />
-<NumberInput source="numberOfEditions"   />
+                                        <TextInput source="title"   />
+<TextInput source="isbn"   />
 <NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -87,9 +78,6 @@ export const booksCreate = () => (
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
 ,
-,
-,
-<ReferenceInput source="author" label="author" reference="authors"   alwaysOn/>,
 ,
 
     ];
