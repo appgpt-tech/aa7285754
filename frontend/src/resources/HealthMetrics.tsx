@@ -52,8 +52,7 @@ export const HealthMetricsList = () => (
 <TextField source="type" />
 <NumberField source="value" />
 <TextField source="unit" />
-<DateField source="date" />
-<NumberField source="id" /><EditButton />
+<DateField source="date" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -68,7 +67,6 @@ export const HealthMetricsEdit = () => (
 <NumberInput source="value"   />
 <TextInput source="unit"   />
 <DateInput source="date"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -82,7 +80,6 @@ export const HealthMetricsCreate = () => (
 <NumberInput source="value"   />
 <TextInput source="unit"   />
 <DateInput source="date"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
