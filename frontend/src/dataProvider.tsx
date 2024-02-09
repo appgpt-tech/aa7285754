@@ -6,74 +6,68 @@ import postgrestRestProvider from "@promitheus/ra-data-postgrest";
 import qs from 'qs';
 
 const fieldConfig = 
-    {
-  "friends": [
-    {
-      "field": "name",
-      "datatype": "String"
-    },
-    {
-      "field": "birthday",
-      "datatype": "DateTime"
-    },
-    {
-      "field": "starSign",
-      "datatype": "String"
-    },
-    {
-      "field": "gender",
-      "datatype": "String"
-    },
-    {
-      "field": "email",
-      "datatype": "String"
-    },
-    {
-      "field": "id",
-      "datatype": "Integer"
-    }
-  ]
-},
-{
-  "websites": [
-    {
-      "field": "siteName",
-      "datatype": "String"
-    },
-    {
-      "field": "url",
-      "datatype": "String"
-    },
-    {
-      "field": "rating",
-      "datatype": "Integer"
-    },
-    {
-      "field": "id",
-      "datatype": "Integer"
-    }
-  ]
-},
-{
-  "credentials": [
-    {
-      "field": "url",
-      "datatype": "String"
-    },
-    {
-      "field": "username",
-      "datatype": "String"
-    },
-    {
-      "field": "password",
-      "datatype": "String"
-    },
-    {
-      "field": "id",
-      "datatype": "Integer"
-    }
-  ]
-}
+    friends: [
+  {
+    "field": "name",
+    "datatype": "String"
+  },
+  {
+    "field": "birthday",
+    "datatype": "DateTime"
+  },
+  {
+    "field": "starSign",
+    "datatype": "String"
+  },
+  {
+    "field": "gender",
+    "datatype": "String"
+  },
+  {
+    "field": "email",
+    "datatype": "String"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
+  }
+],
+websites: [
+  {
+    "field": "siteName",
+    "datatype": "String"
+  },
+  {
+    "field": "url",
+    "datatype": "String"
+  },
+  {
+    "field": "rating",
+    "datatype": "Integer"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
+  }
+],
+credentials: [
+  {
+    "field": "url",
+    "datatype": "String"
+  },
+  {
+    "field": "username",
+    "datatype": "String"
+  },
+  {
+    "field": "password",
+    "datatype": "String"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
+  }
+]
  ;
 
 export const customDataProvider = (apiUrl, options = {}) => {
