@@ -23,14 +23,24 @@ import {
   //Input controls
   BooleanInput,
   DateInput,
-  //EmailInput,
+  EmailInput,
   ImageInput,
   NumberInput,
   ReferenceInput,
   TextInput,
-  //UrlInput,
+  UrlInput,
+  PasswordInput
 } from "react-admin";
 import { useRecordContext } from "react-admin";
+const ReadOnlyPasswordField = ({ record, source }) => {
+
+  // You can customize the way you display the password here, e.g., mask it with asterisks
+  const maskedPassword =  '********';
+
+  return (
+      <span>{maskedPassword}</span>
+  );
+};
 const ListActions = () => (
     <TopToolbar>
         <FilterButton />
@@ -50,8 +60,7 @@ export const SetsList = () => (
           <TextField source="setId" />
 <TextField source="setname" />
 <DateField source="releasedate" />
-<NumberField source="totalcards" />
-<NumberField source="id" /><EditButton />
+<NumberField source="totalcards" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -64,7 +73,6 @@ export const SetsEdit = () => (
 <TextInput source="setname"   />
 <DateInput source="releasedate"   />
 <NumberInput source="totalcards"   />
-<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -76,7 +84,6 @@ export const SetsCreate = () => (
 <TextInput source="setname"   />
 <DateInput source="releasedate"   />
 <NumberInput source="totalcards"   />
-<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
