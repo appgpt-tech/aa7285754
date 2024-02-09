@@ -5,7 +5,7 @@ import {
 import postgrestRestProvider from "@promitheus/ra-data-postgrest";
 import qs from 'qs';
 
-const fieldConfig = 
+const fieldConfig = {
     friends: [
   {
     "field": "name",
@@ -68,7 +68,7 @@ credentials: [
     "datatype": "Integer"
   }
 ]
- ;
+};
 
 export const customDataProvider = (apiUrl, options = {}) => {
     const baseDataProvider = postgrestRestProvider(apiUrl);
