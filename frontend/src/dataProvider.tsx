@@ -33,7 +33,7 @@ const fieldConfig =
       "datatype": "Integer"
     }
   ]
-}
+},
 {
   "websites": [
     {
@@ -53,7 +53,7 @@ const fieldConfig =
       "datatype": "Integer"
     }
   ]
-}
+},
 {
   "credentials": [
     {
