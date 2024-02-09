@@ -11,7 +11,7 @@ import data from "./data";
 import { friendsList, friendsCreate, friendsEdit} from "./resources/friends";
 import { websitesList, websitesCreate, websitesEdit} from "./resources/websites";
 import { credentialsList, credentialsCreate, credentialsEdit} from "./resources/credentials";
-import friendsIcon from "@mui/icons-material/Person";
+import friendsIcon from "@mui/icons-material/People";
 import websitesIcon from "@mui/icons-material/Language";
 import credentialsIcon from "@mui/icons-material/VpnKey"; 
 // SUPERTOKENS
