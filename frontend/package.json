@@ -12,6 +12,7 @@
   "dependencies": {
     "@mui/icons-material": "5.11.9",
     "@promitheus/ra-data-postgrest": "1.2.2",
+    "qs": "^6.11.2",
     "ra-data-fakerest": "4.14.4",
     "ra-language-french": "4.8.0",
     "ra-language-german": "3.13.5",
