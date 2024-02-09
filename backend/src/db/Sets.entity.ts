@@ -6,16 +6,16 @@ export class SetsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 setId: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 setname: string;
 
-@Column({nullable: true})
+@Column("date",{nullable: true})
 releasedate: Date;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 totalcards: number;
 
 
