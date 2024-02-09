@@ -8,11 +8,11 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { friendsList, friendsCreate, friendsEdit} from "./resources/friends";
-import { websitesList, websitesCreate, websitesEdit} from "./resources/websites";
+import { contactsList, contactsCreate, contactsEdit} from "./resources/contacts";
+import { tasksList, tasksCreate, tasksEdit} from "./resources/tasks";
 import { credentialsList, credentialsCreate, credentialsEdit} from "./resources/credentials";
-import friendsIcon from "@mui/icons-material/Person";
-import websitesIcon from "@mui/icons-material/Language";
+import contactsIcon from "@mui/icons-material/Contacts";
+import tasksIcon from "@mui/icons-material/Task";
 import credentialsIcon from "@mui/icons-material/VpnKey"; 
 // SUPERTOKENS
 import React from "react";
@@ -75,18 +75,18 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="friends" options={{label:"Friends"}} 
-list={friendsList}
-create={friendsCreate}
-edit={friendsEdit}
+    <Resource name="contacts" options={{label:"Contacts"}} 
+list={contactsList}
+create={contactsCreate}
+edit={contactsEdit}
 recordRepresentation="name"
-icon={friendsIcon}/>
-<Resource name="websites" options={{label:"Websites"}} 
-list={websitesList}
-create={websitesCreate}
-edit={websitesEdit}
-recordRepresentation="siteName"
-icon={websitesIcon}/>
+icon={contactsIcon}/>
+<Resource name="tasks" options={{label:"Tasks"}} 
+list={tasksList}
+create={tasksCreate}
+edit={tasksEdit}
+recordRepresentation="taskTitle"
+icon={tasksIcon}/>
 <Resource name="credentials" options={{label:"Credentials"}} 
 list={credentialsList}
 create={credentialsCreate}
