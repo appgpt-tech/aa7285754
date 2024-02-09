@@ -51,15 +51,14 @@ const ListActions = () => (
 );
 const websitesTitle = () => {
   const record = useRecordContext();
-  return <span>websites {record ? `"${ record.websiteTitle }"` : ""}</span>;
+  return <span>websites {record ? `"${ record.siteName }"` : ""}</span>;
 };
 
 export const websitesList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="websiteTitle" />
+          <TextField source="siteName" />
 <UrlField source="url" />
-<TextField source="category" />
 <NumberField source="rating" /><EditButton />
 
         </DatagridConfigurable>
@@ -69,9 +68,8 @@ export const websitesList = () => (
 export const websitesEdit = () => (
                     <Edit title={<websitesTitle />}>
                       <SimpleForm>
-                          <TextInput source="websiteTitle"   />
+                          <TextInput source="siteName"   />
 <TextInput source="url"   />
-<TextInput source="category"   />
 <NumberInput source="rating"   />
                       </SimpleForm>
                     </Edit>
@@ -80,9 +78,8 @@ export const websitesEdit = () => (
 export const websitesCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="websiteTitle"   />
+                                        <TextInput source="siteName"   />
 <TextInput source="url"   />
-<TextInput source="category"   />
 <NumberInput source="rating"   />
                                     </SimpleForm>
                                   </Create>
@@ -90,7 +87,6 @@ export const websitesCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
 ,
 ,
 ,
