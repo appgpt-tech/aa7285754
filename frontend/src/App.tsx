@@ -1,21 +1,19 @@
 
 // in src/App.tsx
 import { Admin, Resource, CustomRoutes } from "react-admin";
-import postgrestRestProvider from "@promitheus/ra-data-postgrest";
+import { customDataProvider } from "./dataProvider";
 import fakeDataProvider from "ra-data-fakerest";
 import { Dashboard } from "./dashboard";
 import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { contactsList, contactsCreate, contactsEdit} from "./resources/contacts";
+import { friendsList, friendsCreate, friendsEdit} from "./resources/friends";
 import { websitesList, websitesCreate, websitesEdit} from "./resources/websites";
 import { credentialsList, credentialsCreate, credentialsEdit} from "./resources/credentials";
-import { moviesList, moviesCreate, moviesEdit} from "./resources/movies";
-import contactsIcon from "@mui/icons-material/Contacts";
+import friendsIcon from "@mui/icons-material/Person";
 import websitesIcon from "@mui/icons-material/Language";
-import credentialsIcon from "@mui/icons-material/VpnKey";
-import moviesIcon from "@mui/icons-material/Movie"; 
+import credentialsIcon from "@mui/icons-material/VpnKey"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -54,7 +52,7 @@ apInitialize(Session);
 // END SUPERTOKENS
 let dataProvider: any;
 if (import.meta.env.VITE_USE_BACKEND_DATA === "true") {
-  dataProvider = postgrestRestProvider(
+  dataProvider = customDataProvider(
     import.meta.env.VITE_BACKEND_DOMAIN +
       import.meta.env.VITE_BACKEND_APIPATH +
       "/proxy"
@@ -77,17 +75,17 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="contacts" options={{label:"Contacts"}} 
-list={contactsList}
-create={contactsCreate}
-edit={contactsEdit}
+    <Resource name="friends" options={{label:"Friends"}} 
+list={friendsList}
+create={friendsCreate}
+edit={friendsEdit}
 recordRepresentation="name"
-icon={contactsIcon}/>
+icon={friendsIcon}/>
 <Resource name="websites" options={{label:"Websites"}} 
 list={websitesList}
 create={websitesCreate}
 edit={websitesEdit}
-recordRepresentation="websiteTitle"
+recordRepresentation="siteName"
 icon={websitesIcon}/>
 <Resource name="credentials" options={{label:"Credentials"}} 
 list={credentialsList}
@@ -95,12 +93,6 @@ create={credentialsCreate}
 edit={credentialsEdit}
 recordRepresentation="url"
 icon={credentialsIcon}/>
-<Resource name="movies" options={{label:"Movies"}} 
-list={moviesList}
-create={moviesCreate}
-edit={moviesEdit}
-recordRepresentation="movieTitle"
-icon={moviesIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
