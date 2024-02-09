@@ -15,7 +15,7 @@ url: string;
 @Column("text",{nullable: true})
 category: string;
 
-@Column("integer",{nullable: true})
+@Column("real",{nullable: true})
 rating: number;
 
 
