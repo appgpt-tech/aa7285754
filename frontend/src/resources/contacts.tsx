@@ -58,9 +58,8 @@ export const contactsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
           <TextField source="name" />
-<EmailField source="email" />
-<TextField source="mobileNumber" />
-<UrlField source="linkedinUrl" /><EditButton />
+<TextField source="mobile" />
+<EmailField source="email" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -70,9 +69,8 @@ export const contactsEdit = () => (
                     <Edit title={<contactsTitle />}>
                       <SimpleForm>
                           <TextInput source="name"   />
+<TextInput source="mobile"   />
 <TextInput source="email"   />
-<TextInput source="mobileNumber"   />
-<TextInput source="linkedinUrl"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -81,16 +79,14 @@ export const contactsCreate = () => (
                                   <Create>
                                     <SimpleForm>
                                         <TextInput source="name"   />
+<TextInput source="mobile"   />
 <TextInput source="email"   />
-<TextInput source="mobileNumber"   />
-<TextInput source="linkedinUrl"   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
 ,
 ,
 ,
