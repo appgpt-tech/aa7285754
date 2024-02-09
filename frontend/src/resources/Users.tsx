@@ -23,14 +23,24 @@ import {
   //Input controls
   BooleanInput,
   DateInput,
-  //EmailInput,
+  EmailInput,
   ImageInput,
   NumberInput,
   ReferenceInput,
   TextInput,
-  //UrlInput,
+  UrlInput,
+  PasswordInput
 } from "react-admin";
 import { useRecordContext } from "react-admin";
+const ReadOnlyPasswordField = ({ record, source }) => {
+
+  // You can customize the way you display the password here, e.g., mask it with asterisks
+  const maskedPassword =  '********';
+
+  return (
+      <span>{maskedPassword}</span>
+  );
+};
 const ListActions = () => (
     <TopToolbar>
         <FilterButton />
@@ -48,10 +58,8 @@ export const UsersList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
           <TextField source="userId" />
-<TextField source="name" />
-<TextField source="email" />
-<TextField source="password" />
-<TextField source="role" /><EditButton />
+<EmailField source="email" />
+<TextField source="name" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -61,10 +69,8 @@ export const UsersEdit = () => (
                     <Edit title={<UsersTitle />}>
                       <SimpleForm>
                           <TextInput source="userId"   />
-<TextInput source="name"   />
 <TextInput source="email"   />
-<TextInput source="password"   />
-<TextInput source="role"   />
+<TextInput source="name"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -73,18 +79,14 @@ export const UsersCreate = () => (
                                   <Create>
                                     <SimpleForm>
                                         <TextInput source="userId"   />
-<TextInput source="name"   />
 <TextInput source="email"   />
-<TextInput source="password"   />
-<TextInput source="role"   />
+<TextInput source="name"   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
-,
 ,
 ,
 ,
