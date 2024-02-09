@@ -10,13 +10,10 @@ export class contactsEntity {
 name: string;
 
 @Column("text",{nullable: true})
+mobile: string;
+
+@Column("text",{nullable: true})
 email: string;
-
-@Column("text",{nullable: true})
-mobileNumber: string;
-
-@Column("text",{nullable: true})
-linkedinUrl: string;
 
 
 }
