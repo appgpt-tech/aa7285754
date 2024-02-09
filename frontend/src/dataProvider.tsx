@@ -6,21 +6,13 @@ import postgrestRestProvider from "@promitheus/ra-data-postgrest";
 import qs from 'qs';
 
 const fieldConfig = {
-    friends: [
+    contacts: [
   {
     "field": "name",
     "datatype": "String"
   },
   {
-    "field": "birthday",
-    "datatype": "DateTime"
-  },
-  {
-    "field": "starSign",
-    "datatype": "String"
-  },
-  {
-    "field": "gender",
+    "field": "mobile",
     "datatype": "String"
   },
   {
@@ -32,18 +24,26 @@ const fieldConfig = {
     "datatype": "Integer"
   }
 ],
-websites: [
+tasks: [
   {
-    "field": "siteName",
+    "field": "taskTitle",
     "datatype": "String"
   },
   {
-    "field": "url",
+    "field": "description",
     "datatype": "String"
   },
   {
-    "field": "rating",
-    "datatype": "Integer"
+    "field": "scheduledStartDate",
+    "datatype": "DateTime"
+  },
+  {
+    "field": "scheduledEndDate",
+    "datatype": "DateTime"
+  },
+  {
+    "field": "actualEndDate",
+    "datatype": "DateTime"
   },
   {
     "field": "id",
