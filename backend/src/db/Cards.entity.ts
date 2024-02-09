@@ -6,28 +6,28 @@ export class CardsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column("text",{nullable: true})
 cardId: string;
 
-@Column({nullable: true})
+@Column("integer",{nullable: true})
 setid: number;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 cardName: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 serial: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 type: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 rarity: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 condition: string;
 
-@Column({nullable: true})
+@Column("text",{nullable: true})
 imageurl: string;
 
 
