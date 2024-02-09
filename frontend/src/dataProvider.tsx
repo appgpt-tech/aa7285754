@@ -6,13 +6,9 @@ import postgrestRestProvider from "@promitheus/ra-data-postgrest";
 import qs from 'qs';
 
 const fieldConfig = {
-    contacts: [
+    Users: [
   {
-    "field": "name",
-    "datatype": "String"
-  },
-  {
-    "field": "mobile",
+    "field": "userId",
     "datatype": "String"
   },
   {
@@ -20,48 +16,104 @@ const fieldConfig = {
     "datatype": "String"
   },
   {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-tasks: [
-  {
-    "field": "taskTitle",
+    "field": "name",
     "datatype": "String"
-  },
-  {
-    "field": "description",
-    "datatype": "String"
-  },
-  {
-    "field": "scheduledStartDate",
-    "datatype": "DateTime"
-  },
-  {
-    "field": "scheduledEndDate",
-    "datatype": "DateTime"
-  },
-  {
-    "field": "actualEndDate",
-    "datatype": "DateTime"
   },
   {
     "field": "id",
     "datatype": "Integer"
   }
 ],
-credentials: [
+Cards: [
   {
-    "field": "url",
+    "field": "cardId",
     "datatype": "String"
   },
   {
-    "field": "username",
+    "field": "setid",
+    "datatype": "Integer"
+  },
+  {
+    "field": "cardName",
     "datatype": "String"
   },
   {
-    "field": "password",
+    "field": "serial",
     "datatype": "String"
+  },
+  {
+    "field": "type",
+    "datatype": "String"
+  },
+  {
+    "field": "rarity",
+    "datatype": "String"
+  },
+  {
+    "field": "condition",
+    "datatype": "String"
+  },
+  {
+    "field": "imageurl",
+    "datatype": "String"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
+  }
+],
+Sets: [
+  {
+    "field": "setId",
+    "datatype": "String"
+  },
+  {
+    "field": "setname",
+    "datatype": "String"
+  },
+  {
+    "field": "releasedate",
+    "datatype": "DateTime"
+  },
+  {
+    "field": "totalcards",
+    "datatype": "Integer"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
+  }
+],
+Inventory: [
+  {
+    "field": "userId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "cardId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "recordedDate",
+    "datatype": "DateTime"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
+  }
+],
+Wishlist: [
+  {
+    "field": "userId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "cardId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "insertedDate",
+    "datatype": "DateTime"
   },
   {
     "field": "id",
